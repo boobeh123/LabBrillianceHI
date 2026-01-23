@@ -20,6 +20,14 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 # 🛠️ LabBrillianceHI Patch 0.0.008
 📅 **Release Date:** March 27th, 2026
 
+## 📢 Developer's Notes - Pointed .com domain to Netlify webpage
+
+- The business owner purchased a domain from GoDaddy & it directs to the new website -> https://labbrilliancehi.com/
+---------------------------------------------------------------------------------------------------------------------------
+
+# 🛠️ LabBrillianceHI Patch 0.0.008
+📅 **Release Date:** March 27th, 2026
+
 ## 📢 Developer's Notes - Nav & Footer
 
 - Added a transparent-sticky nav
