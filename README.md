@@ -8,17 +8,26 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 * WebP image format
 * Responsive to mobile viewports
 * Accessible to screen readers using Semantic HTML & ARIA
+* Custom domain - Point LabBrillianceHI.com to webpage
 
 ## Optimizations
-* Custom domain - Point LabBrillianceHI.com to webpage
 * Directly sell products with Shopify
 
 ## Technologies
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" alt="HTML" height="50"/><img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS" height="50"/><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" height="50"/>
 
 ## Version History
-# 🛠️ LabBrillianceHI Patch 0.0.008
-📅 **Release Date:** March 27th, 2026
+# 🛠️ LabBrillianceHI Patch 0.0.010
+📅 **Release Date:** March 31st, 2026
+
+## 📢 Developer's Notes - Add landing page
+
+- The 3 collection cards will redirect to separate landing pages
+    - The "Available Diamonds" card displays a gallery of images from the business owner's inventory
+- Added Business Instagram to the footer & hamburger nav
+---------------------------------------------------------------------------------------------------------------------------
+# 🛠️ LabBrillianceHI Patch 0.0.009
+📅 **Release Date:** March 28th, 2026
 
 ## 📢 Developer's Notes - Pointed .com domain to Netlify webpage
 
