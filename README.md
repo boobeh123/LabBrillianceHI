@@ -17,10 +17,20 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" alt="HTML" height="50"/><img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS" height="50"/><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" height="50"/>
 
 ## Version History
+# 🛠️ LabBrillianceHI Patch 0.0.011
+📅 **Release Date:** April 2nd, 2026
+
+## 📢 Developer's Notes - Add section & landing page 
+
+- Add The LabBrillianceHI Experience section 
+    - This section uses a centered vertical timeline design
+- Add made-to-order landing page
+    - The anchors within The LabBrillianceHI Experience section & the collection cards redirect to this landing page
+---------------------------------------------------------------------------------------------------------------------------
 # 🛠️ LabBrillianceHI Patch 0.0.010
 📅 **Release Date:** March 31st, 2026
 
-## 📢 Developer's Notes - Add landing page
+## 📢 Developer's Notes - Add landing page for Available Diamonds
 
 - The 3 collection cards will redirect to separate landing pages
     - The "Available Diamonds" card displays a gallery of images from the business owner's inventory
