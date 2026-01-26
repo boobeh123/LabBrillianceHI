@@ -17,6 +17,14 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" alt="HTML" height="50"/><img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS" height="50"/><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" height="50"/>
 
 ## Version History
+# 🛠️ LabBrillianceHI Patch 0.0.012
+📅 **Release Date:** April 11th, 2026
+
+## 📢 Developer's Notes - Deadline tomorrow
+
+- Time to catch up on my backlog and review the To-Do list from the business owner
+    - Remove The LabBrillianceHI Experience section 
+---------------------------------------------------------------------------------------------------------------------------
 # 🛠️ LabBrillianceHI Patch 0.0.011
 📅 **Release Date:** April 2nd, 2026
 
