@@ -24,6 +24,9 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 
 - Time to catch up on my backlog and review the To-Do list from the business owner
     - Remove The LabBrillianceHI Experience section 
+    - Add landing page for custom-design (collection card #2)
+    - Add 2 FAQs to policies
+    - Update text content/anchor hrefs
 ---------------------------------------------------------------------------------------------------------------------------
 # 🛠️ LabBrillianceHI Patch 0.0.011
 📅 **Release Date:** April 2nd, 2026
