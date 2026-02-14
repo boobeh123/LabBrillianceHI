@@ -17,6 +17,20 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" alt="HTML" height="50"/><img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS" height="50"/><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" height="50"/>
 
 ## Version History
+# 🛠️ LabBrillianceHI Patch 1.0.000
+📅 **Release Date:** April 12th, 2026
+
+## 📢 Developer's Notes - v1.0 - Official launch
+
+- Congratulations to the business owner on their new website
+
+- Rollback The LabBrillianceHI Experience section
+    - Relocated below FAQs & above contact form
+    - Remove the Choose your path/dual collection cards
+- FAQ #7,8,9 are now FAQ #1,2,3
+- A few styling changes for mobile viewports
+- Display The LabBrillianceHI Experience as "how it works" on nav-links/hamburger-menu/footer
+---------------------------------------------------------------------------------------------------------------------------
 # 🛠️ LabBrillianceHI Patch 0.0.012
 📅 **Release Date:** April 11th, 2026
 
