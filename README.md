@@ -17,6 +17,15 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" alt="HTML" height="50"/><img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS" height="50"/><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" height="50"/>
 
 ## Version History
+# 🛠️ LabBrillianceHI Patch 0.0.003
+📅 **Release Date:** March 17th, 2026
+
+## 📢 Developer's  - Gallery panel section
+
+- Upscaled the resolution of the previous `herobg.webp` using `Canva`
+- Added gallery-panel section which will showcase various products from the business
+    - Hover (or tap) these to see beautiful animations
+---------------------------------------------------------------------------------------------------------------------------
 # 🛠️ LabBrillianceHI Patch 0.0.002
 📅 **Release Date:** March 16th, 2026
 
