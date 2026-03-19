@@ -278,7 +278,7 @@
 
 .collection-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -559,14 +559,31 @@
   .collection-grid {
     grid-template-columns: 1fr;
     max-width: 520px;
+    /* border: 2px solid red; */
   }
   .collection-card {
     height: 52vh;
     min-height: 340px;
+    /* border: 2px solid red; */
   }
   .collection-card-predesigned,
   .collection-card-gems {
     transition-delay: 0s;
+    /* border: 2px solid red; */
+  }
+
+  .collection-card-corner {
+    opacity: 1;
+  }
+
+  .collection-card-desc {
+    opacity: 1;
+    max-height: 80px;
+    /* border: 2px solid red; */
+  }
+
+  .collection-card-btn {
+    opacity: 1;
   }
 }
 
