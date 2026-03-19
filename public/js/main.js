@@ -24,7 +24,7 @@ Pseudocode:
 ******************************************/
 
 const revealTargets = document.querySelectorAll(
-    '.collection-header, .collection-card'
+    '.collection-header, .collection-card, .about-pull, .about-divider, .about-col, .about-col-rule, .about-signoff'
   );
   
   const observer = new IntersectionObserver(
