@@ -435,16 +435,6 @@
   /* border: 2px solid red; */
 }
 
-.collection-card-label {
-  font-family: var(--font-caps);
-  font-size: 0.62rem;
-  font-weight: 400;
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
-  /* border: 2px solid red; */
-}
-
 .collection-card-title {
   font-family: var(--font-serif);
   font-size: clamp(1.7rem, 2.8vw, 2.4rem);
