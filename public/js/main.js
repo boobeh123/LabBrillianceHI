@@ -24,7 +24,7 @@ Pseudocode:
 ******************************************/
 
 const revealTargets = document.querySelectorAll(
-    '.collection-header, .collection-card, .about-pull, .about-divider, .about-col, .about-col-rule, .about-signoff'
+    '.collection-header, .collection-card, .about-pull, .about-divider, .about-col, .about-col-rule, .about-signoff, .policies-header, .policies-accordion, .policies-footer',
   );
   
   const observer = new IntersectionObserver(
@@ -43,3 +43,32 @@ const revealTargets = document.querySelectorAll(
   );
   
   revealTargets.forEach((el) => observer.observe(el));
+
+/*****************************************
+ * Policies/FAQ accordion
+******************************************/
+
+const triggers = document.querySelectorAll('.policies-item-trigger');
+
+triggers.forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+    const bodyId = trigger.getAttribute('aria-controls');
+    const body = document.getElementById(bodyId);
+
+    // Close all other open panels first
+    triggers.forEach((otherTrigger) => {
+      if (otherTrigger !== trigger) {
+        otherTrigger.setAttribute('aria-expanded', 'false');
+        const otherId = otherTrigger.getAttribute('aria-controls');
+        const otherBody = document.getElementById(otherId);
+        otherBody.classList.remove('open');
+      }
+    });
+
+    // Toggle the clicked panel
+    const newState = !isExpanded;
+    trigger.setAttribute('aria-expanded', String(newState));
+    body.classList.toggle('open', newState);
+  });
+});
