@@ -17,10 +17,21 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" alt="HTML" height="50"/><img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS" height="50"/><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" height="50"/>
 
 ## Version History
+# 🛠️ LabBrillianceHI Patch 0.0.006
+📅 **Release Date:** March 20th, 2026
+
+## 📢 Developer's Notes - Policies/FAQ sectiion & revisions
+
+- I used an accordion to reveal FAQ/policies for the business
+- The business owner wanted to change a few things:
+    - Add the 3rd .collection-card article back in
+    - Remove the rainbow gradient from one of the .collection-card
+    - Updated images for the .collection-cards
+---------------------------------------------------------------------------------------------------------------------------
 # 🛠️ LabBrillianceHI Patch 0.0.005
 📅 **Release Date:** March 19th, 2026
 
-## 📢 Developer's  - Revisions
+## 📢 Developer's Notes - Revisions
 
 - The business owner wanted to change a few things:
     - Updated wording on the text content
@@ -31,7 +42,7 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 # 🛠️ LabBrillianceHI Patch 0.0.004
 📅 **Release Date:** March 18th, 2026
 
-## 📢 Developer's  - About Us & revisions
+## 📢 Developer's Notes - About Us & revisions
 
 - Removed an article from the gallery panel section & updated text content
     - The text content now better reflects what the business offers
@@ -43,7 +54,7 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 # 🛠️ LabBrillianceHI Patch 0.0.003
 📅 **Release Date:** March 17th, 2026
 
-## 📢 Developer's  - Gallery panel section
+## 📢 Developer's Notes - Gallery panel section
 
 - Upscaled the resolution of the previous `herobg.webp` using `Canva`
 - Added gallery-panel section which will showcase various products from the business
@@ -52,7 +63,7 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 # 🛠️ LabBrillianceHI Patch 0.0.002
 📅 **Release Date:** March 16th, 2026
 
-## 📢 Developer's  - Hero section
+## 📢 Developer's Notes - Hero section
 
 - Added text content, background image, buttons, and a couple animations to the hero section
     - I need to find a higher resolution image for the background-image. Looks fine on mobile though
@@ -60,7 +71,7 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 # 🛠️ LabBrillianceHI Patch 0.0.001
 📅 **Release Date:** March 15th, 2026
 
-## 📢 Developer's  - Initial commit
+## 📢 Developer's Notes - Initial commit
 
 - Started on the index by adding most of the `<meta>` elements to the `<head>`
     - Generated the favicon with `Canva` & used `favicon.io` to convert the image to 32x32 & 180x180 dimensions
