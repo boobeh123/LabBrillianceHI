@@ -271,6 +271,143 @@
       <a href="#contact" class="btn btn-policies">Get in Touch</a>
     </div>
   </section>
+  <section class="contact" id="contact" aria-label="Start your diamond search">
+    <div class="contact-inner">
+      <div class="contact-intro">
+        <span class="contact-intro-script">Let's Begin</span>
+        <h2 class="contact-intro-title">Start Your<br>Diamond Search</h2>
+        <p class="contact-intro-sub">Tell me what you're looking for, and I'll curate options tailored to you.</p>
+        <div class="contact-intro-divider" aria-hidden="true">
+          <span class="contact-intro-rule"></span>
+          <svg viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polygon points="16,0 32,10 25,28 7,28 0,10" fill="none" stroke="currentColor" stroke-width="1"/>
+            <line x1="16" y1="0"  x2="16" y2="7"  stroke="currentColor" stroke-width="0.6"/>
+            <line x1="0"  y1="10" x2="32" y2="10" stroke="currentColor" stroke-width="0.6"/>
+            <line x1="16" y1="7"  x2="7"  y2="28" stroke="currentColor" stroke-width="0.6"/>
+            <line x1="16" y1="7"  x2="25" y2="28" stroke="currentColor" stroke-width="0.6"/>
+          </svg>
+          <span class="contact-intro-rule"></span>
+        </div>
+        <ul class="contact-intro-promises">
+          <li>No pressure, no pushy sales</li>
+          <li>Personally curated selections</li>
+          <li>IGI certified stones only</li>
+        </ul>
+      </div>
+      <div class="contact-form-wrap">
+        <form class="contact-form" id="contact-form" name="diamond-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate aria-label="Diamond inquiry form">
+          <input type="hidden" name="form-name" value="diamond-inquiry" />
+          <p class="contact-form-honeypot" aria-hidden="true">
+            <label>Don't fill this out: <input name="bot-field" tabindex="-1" /></label>
+          </p>
+          <div class="contact-form-row contact-form-row-2col">
+            <div class="contact-field">
+              <input class="contact-field-input" type="text" id="cf-name" name="full-name" placeholder=" " required autocomplete="name"/>
+              <label class="contact-field-label" for="cf-name">Full Name <span aria-hidden="true">*</span></label>
+              <span class="contact-field-line" aria-hidden="true"></span>
+            </div>
+            <div class="contact-field">
+              <input class="contact-field-input" type="email" id="cf-email" name="email" placeholder=" " required autocomplete="email"/>
+              <label class="contact-field-label" for="cf-email">Email Address <span aria-hidden="true">*</span></label>
+              <span class="contact-field-line" aria-hidden="true"></span>
+            </div>
+          </div>
+          <div class="contact-form-row contact-form-row-2col">
+            <div class="contact-field contact-field-select">
+              <select class="contact-field-input" id="cf-looking-for" name="looking-for" required>
+                <option value="" disabled selected hidden></option>
+                <option value="ring">Ring</option>
+                <option value="loose-diamond">Loose Diamond</option>
+                <option value="earrings">Earrings</option>
+                <option value="pendant">Pendant</option>
+                <option value="not-sure">Not sure yet</option>
+              </select>
+              <label class="contact-field-label contact-field-label-select" for="cf-looking-for">What are you looking for? <span aria-hidden="true">*</span></label>
+              <span class="contact-field-line" aria-hidden="true"></span>
+              <svg class="contact-field-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="contact-field contact-field-select">
+              <select class="contact-field-input" id="cf-shape" name="preferred-shape">
+                <option value="" disabled selected hidden></option>
+                <option value="round">Round</option>
+                <option value="oval">Oval</option>
+                <option value="emerald">Emerald</option>
+                <option value="pear">Pear</option>
+                <option value="radiant">Radiant</option>
+                <option value="cushion">Cushion</option>
+                <option value="princess">Princess</option>
+                <option value="other">Other</option>
+              </select>
+              <label class="contact-field-label contact-field-label-select" for="cf-shape">Preferred Shape</label>
+              <span class="contact-field-line" aria-hidden="true"></span>
+              <svg class="contact-field-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="contact-form-row contact-form-row-2col">
+            <div class="contact-field">
+              <input class="contact-field-input" type="text" id="cf-carat" name="carat-range" placeholder=" " autocomplete="off"/>
+              <label class="contact-field-label" for="cf-carat">Desired Carat Range</label>
+              <span class="contact-field-line" aria-hidden="true"></span>
+            </div>
+            <div class="contact-field">
+              <input class="contact-field-input" type="text" id="cf-budget" name="budget-range" placeholder=" " autocomplete="off" />
+              <label class="contact-field-label" for="cf-budget">Budget Range <span class="contact-field-optional">(optional)</span></label>
+              <span class="contact-field-line" aria-hidden="true"></span>
+            </div>
+          </div>
+          <div class="contact-form-row">
+            <fieldset class="contact-fieldset">
+              <legend class="contact-fieldset-legend">Timeline</legend>
+              <div class="contact-chips">
+                <label class="contact-chip">
+                  <input type="radio" name="timeline" value="asap" />
+                  <span>ASAP</span>
+                </label>
+                <label class="contact-chip">
+                  <input type="radio" name="timeline" value="1-3-months" />
+                  <span>1–3 Months</span>
+                </label>
+                <label class="contact-chip">
+                  <input type="radio" name="timeline" value="just-exploring" />
+                  <span>Just Exploring</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="contact-form-row">
+            <div class="contact-field contact-field-textarea">
+              <textarea class="contact-field-input" id="cf-details" name="additional-details" placeholder=" " rows="4" ></textarea>
+              <label class="contact-field-label" for="cf-details">Tell me your vision</label>
+              <span class="contact-field-line" aria-hidden="true"></span>
+            </div>
+          </div>
+          <button class="contact-submit" type="submit">
+            <span class="contact-submit-text">Submit Inquiry</span>
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+        <div class="contact-thankyou" id="contact-thankyou" aria-live="polite" hidden>
+          <svg class="contact-thankyou-diamond" viewBox="0 0 80 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polygon points="40,0 80,28 62,72 18,72 0,28" fill="none" stroke="#4d6b8a" stroke-width="1.5"/>
+            <polygon points="40,0 80,28 40,18" fill="rgba(77,107,138,0.08)" stroke="#4d6b8a" stroke-width="0.8"/>
+            <polygon points="40,0 0,28 40,18"  fill="rgba(77,107,138,0.05)" stroke="#4d6b8a" stroke-width="0.8"/>
+            <line x1="0"  y1="28" x2="80" y2="28" stroke="#4d6b8a" stroke-width="0.6"/>
+            <line x1="40" y1="18" x2="18" y2="72" stroke="#4d6b8a" stroke-width="0.6"/>
+            <line x1="40" y1="18" x2="62" y2="72" stroke="#4d6b8a" stroke-width="0.6"/>
+          </svg>
+          <h3 class="contact-thankyou-heading">Thank you for your inquiry ✨</h3>
+          <p class="contact-thankyou-sub">I'll be in touch soon with curated options for you.</p>
+          <p class="contact-thankyou-sign">— LabBrillianceHI 🤍</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <script src="public/js/main.js" defer></script>
 </body>
