@@ -17,6 +17,16 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" alt="HTML" height="50"/><img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS" height="50"/><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" height="50"/>
 
 ## Version History
+# 🛠️ LabBrillianceHI Patch 0.0.007
+📅 **Release Date:** March 21st, 2026
+
+## 📢 Developer's Notes - Contact us section w/ contact form
+
+- I added the contact us section with a form.
+    - Submitting a message will display a thank you message with an animation
+- The business owner wanted to change a few things:
+    - Update paragraph text content on .collection-card-desc description
+---------------------------------------------------------------------------------------------------------------------------
 # 🛠️ LabBrillianceHI Patch 0.0.006
 📅 **Release Date:** March 20th, 2026
 
