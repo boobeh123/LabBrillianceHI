@@ -112,3 +112,66 @@ if (contactForm && thankYou) {
     }
   });
 }
+
+/*****************************************
+* Footer - dynamic copyright year
+******************************************/
+const yearEl = document.querySelector('#footer-year');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+} 
+  
+
+/*****************************************
+* Nav
+******************************************/
+
+const navEl = document.querySelector('#nav');
+
+const onScroll = () => {
+  if (window.scrollY > 40) {
+    navEl.classList.add('scrolled');
+  } else {
+    navEl.classList.remove('scrolled');
+  }
+};
+
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+const hamburger  = document.querySelector('#nav-hamburger');
+const overlay    = document.querySelector('#nav-overlay');
+const closeLinks = document.querySelectorAll('[data-nav-close]');
+
+const openMenu = () => {
+  overlay.classList.add('open');
+  overlay.setAttribute('aria-hidden', 'false');
+  hamburger.setAttribute('aria-expanded', 'true');
+  hamburger.setAttribute('aria-label', 'Close menu');
+  document.body.style.overflow = 'hidden';
+};
+
+const closeMenu = () => {
+  overlay.classList.remove('open');
+  overlay.setAttribute('aria-hidden', 'true');
+  hamburger.setAttribute('aria-expanded', 'false');
+  hamburger.setAttribute('aria-label', 'Open menu');
+  document.body.style.overflow = '';
+};
+
+hamburger.addEventListener('click', () => {
+  const isOpen = overlay.classList.contains('open');
+  if (isOpen) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+
+// Close when a nav link is tapped
+closeLinks.forEach((link) => link.addEventListener('click', closeMenu));
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && overlay.classList.contains('open')) closeMenu();
+});
