@@ -315,6 +315,20 @@
   /* border: 2px solid red; */
 }
 
+.nav-overlay.open .nav-overlay-link:nth-child(5) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.32s;
+  /* border: 2px solid red; */
+}
+
+.nav-overlay.open .nav-overlay-link:nth-child(6) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.28s;
+  /* border: 2px solid red; */
+}
+
 .nav-overlay-link:hover {
   color: #e8eef4;
   /* border: 2px solid red; */
@@ -1844,6 +1858,220 @@
   /* border: 2px solid red; */
 }
 
+/**************************************************************
+* Available Diamonds Redirect 
+***************************************************************/
+.nav-scrolled-always {
+  background: rgba(244, 247, 249, 0.72) !important;
+  backdrop-filter: blur(18px) saturate(1.4) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.4) !important;
+  border-bottom: 1px solid rgba(180, 205, 225, 0.35) !important;
+  box-shadow: 0 2px 28px rgba(46, 68, 96, 0.08) !important;
+}
+.nav-scrolled-always .nav-brand {
+  color: #2e4460 !important;
+}
+.nav-scrolled-always .nav-brand-diamond {
+  filter: none !important;
+}
+.nav-scrolled-always .nav-link {
+  color: #4d6b8a !important;
+}
+.nav-scrolled-always .nav-link:hover {
+  color: #2e4460 !important;
+}
+.nav-scrolled-always .nav-link-cta {
+  border-color: rgba(77,107,138,0.5) !important;
+  color: #2e4460 !important;
+}
+.nav-scrolled-always .nav-hamburger-bar {
+  background: #2e4460 !important;
+}
+
+.diamonds-header {
+  text-align: center;
+  padding: 8rem 2rem 3.5rem;
+}
+.diamonds-header-script {
+  display: block;
+  font-family: var(--font-script);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--color-brand);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+.diamonds-header-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 400;
+  color: #2e4460;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+}
+.diamonds-header-sub {
+  margin-top: 1rem;
+  font-family: var(--font-caps);
+  font-size: 0.82rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: #6a8aaa;
+  line-height: 1.75;
+  max-width: 52ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.diamonds-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--color-brand);
+  opacity: 0.35;
+  margin-bottom: 4rem;
+}
+.diamonds-divider-rule {
+  display: block;
+  width: clamp(40px, 8vw, 100px);
+  height: 1px;
+  background: currentColor;
+}
+.diamonds-divider svg {
+  width: 18px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.diamonds-gallery {
+  columns: 3;
+  column-gap: 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 6rem;
+}
+
+.diamond-card {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  cursor: pointer;
+  background: #e8eef4;
+}
+.diamond-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.diamond-card:hover img {
+  transform: scale(1.04);
+}
+
+.diamond-card-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1.4rem 1.4rem;
+  background: linear-gradient(to top, rgba(17, 29, 43, 0.88) 0%, transparent 100%);
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.diamond-card:hover .diamond-card-caption {
+  transform: translateY(0);
+}
+.diamond-card-cut {
+  font-family: var(--font-caps);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(184, 208, 232, 0.7);
+  margin-bottom: 0.3rem;
+}
+.diamond-card-name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-weight: 400;
+  color: #e8eef4;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+.diamond-card-specs {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.diamond-card-spec {
+  font-family: var(--font-caps);
+  font-size: 0.62rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(184, 208, 232, 0.6);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+}
+
+.diamond-card-cta {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+  background: #1c2e42;
+  border-radius: 3px;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  min-height: 220px;
+}
+.diamond-card-cta-script {
+  font-family: var(--font-script);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: #8baac8;
+  line-height: 1;
+}
+.diamond-card-cta-text {
+  font-family: var(--font-caps);
+  font-size: 0.78rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: #6a8aaa;
+  line-height: 1.75;
+  max-width: 28ch;
+}
+.diamond-card-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-caps);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #b8d0e8;
+  border-bottom: 1px solid rgba(139, 170, 200, 0.35);
+  padding-bottom: 2px;
+  transition: color 0.22s ease, border-color 0.22s ease;
+}
+.diamond-card-cta-btn:hover {
+  color: #e8eef4;
+  border-color: rgba(184, 208, 232, 0.65);
+}
+.diamond-card-cta-btn svg {
+  transition: transform 0.22s ease;
+}
+.diamond-card-cta-btn:hover svg {
+  transform: translateX(4px);
+}
 
 /**************************************************************
 * Animations
@@ -1897,6 +2125,10 @@
 
   .collection-card-btn {
     opacity: 1;
+  }
+
+  .diamonds-gallery {
+    columns: 2;
   }
 }
 
@@ -1962,6 +2194,16 @@
   .contact-submit {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .diamonds-gallery {
+    columns: 1;
+    padding: 0 1.25rem 4rem;
+  }
+  .diamonds-header {
+    padding: 7rem 1.25rem 2.5rem;
   }
 }
 
