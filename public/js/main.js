@@ -23,7 +23,7 @@ Pseudocode:
 * Begin watching elements by calling observer.observe(elements)
 ******************************************/
 
-const revealTargets = document.querySelectorAll('.collection-header, .collection-card, .about-pull, .about-divider, .about-col, .about-col-rule, .about-signoff, .policies-header, .policies-accordion, .policies-footer, .contact-intro, .contact-form-wrap');
+const revealTargets = document.querySelectorAll('.collection-header, .collection-card, .about-pull, .about-divider, .about-col, .about-col-rule, .about-signoff, .policies-header, .policies-accordion, .policies-footer, .contact-intro, .contact-form-wrap, .experience-header, .experience-step, .experience-ways');
   
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
