@@ -3215,6 +3215,8 @@
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
   .cd-process-connector { display: none; }
   .cd-process-step { max-width: 140px; }
