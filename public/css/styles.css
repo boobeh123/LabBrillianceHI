@@ -329,6 +329,13 @@
   /* border: 2px solid red; */
 }
 
+.nav-overlay.open .nav-overlay-link:nth-child(7) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.34s;
+  /* border: 2px solid red; */
+}
+
 .nav-overlay-link:hover {
   color: #e8eef4;
   /* border: 2px solid red; */
