@@ -348,8 +348,8 @@
     <div class="contact-inner">
       <div class="contact-intro">
         <span class="contact-intro-script">Let's Begin</span>
-        <h2 class="contact-intro-title">Start Your<br>Diamond Search</h2>
-        <p class="contact-intro-sub">Tell me what you're looking for, and I'll curate options tailored to you.</p>
+        <h2 class="contact-intro-title">Start Your<br>Design</h2>
+        <p class="contact-intro-sub">Share a few details and I'll guide you through sourcing and creating your piece</p>
         <div class="contact-intro-divider" aria-hidden="true">
           <span class="contact-intro-rule"></span>
           <svg viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -368,39 +368,75 @@
         </ul>
       </div>
       <div class="contact-form-wrap">
-        <form class="contact-form" id="contact-form" name="diamond-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate aria-label="Diamond inquiry form">
-          <input type="hidden" name="form-name" value="diamond-inquiry" />
+        <form class="contact-form" id="contact-form" name="start-your-design" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate aria-label="Start your design inquiry form">
+          <input type="hidden" name="form-name" value="start-your-design" />
           <p class="contact-form-honeypot" aria-hidden="true">
             <label>Don't fill this out: <input name="bot-field" tabindex="-1" /></label>
           </p>
-          <div class="contact-form-row contact-form-row-2col">
-            <div class="contact-field">
-              <input class="contact-field-input" type="text" id="cf-name" name="full-name" placeholder=" " required autocomplete="name"/>
-              <label class="contact-field-label" for="cf-name">Full Name <span aria-hidden="true">*</span></label>
-              <span class="contact-field-line" aria-hidden="true"></span>
-            </div>
-            <div class="contact-field">
-              <input class="contact-field-input" type="email" id="cf-email" name="email" placeholder=" " required autocomplete="email"/>
-              <label class="contact-field-label" for="cf-email">Email Address <span aria-hidden="true">*</span></label>
-              <span class="contact-field-line" aria-hidden="true"></span>
+          <div class="contact-form-row">
+            <fieldset class="contact-fieldset">
+              <legend class="contact-fieldset-legend">How would you like to begin?</legend>
+              <div class="contact-chips">
+                <label class="contact-chip">
+                  <input type="radio" name="how-to-begin" value="saw-a-piece" />
+                  <span>I saw a piece I like</span>
+                </label>
+                <label class="contact-chip">
+                  <input type="radio" name="how-to-begin" value="design-in-mind" />
+                  <span>I have a design in mind</span>
+                </label>
+                <label class="contact-chip">
+                  <input type="radio" name="how-to-begin" value="help-choosing" />
+                  <span>I'd like help choosing everything</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="contact-form-row">
+            <fieldset class="contact-fieldset">
+              <legend class="contact-fieldset-legend">What would you like to create?</legend>
+              <div class="contact-chips">
+                <label class="contact-chip">
+                  <input type="radio" name="create-type" value="ring" />
+                  <span>Ring</span>
+                </label>
+                <label class="contact-chip">
+                  <input type="radio" name="create-type" value="earrings" />
+                  <span>Earrings</span>
+                </label>
+                <label class="contact-chip">
+                  <input type="radio" name="create-type" value="necklace" />
+                  <span>Necklace</span>
+                </label>
+                <label class="contact-chip">
+                  <input type="radio" name="create-type" value="bracelet" />
+                  <span>Bracelet</span>
+                </label>
+                <label class="contact-chip">
+                  <input type="radio" name="create-type" value="loose-diamond" />
+                  <span>Loose Diamond</span>
+                </label>
+                <label class="contact-chip">
+                  <input type="radio" name="create-type" value="not-sure" />
+                  <span>Not sure yet</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="contact-form-row">
+            <div class="contact-field contact-field-textarea">
+              <textarea
+                class="contact-field-input"
+                id="cf-vision"
+                name="vision"
+                placeholder=" "
+                rows="4"
+              ></textarea>
+              <label class="contact-field-label" for="cf-vision">Tell me what you're looking for <span class="contact-field-optional">(optional)</span></label>
+              <p class="contact-field-hint">Describe the piece, share inspiration, or reference where you saw it</p>
             </div>
           </div>
           <div class="contact-form-row contact-form-row-2col">
-            <div class="contact-field contact-field-select">
-              <select class="contact-field-input" id="cf-looking-for" name="looking-for" required>
-                <option value="" disabled selected hidden></option>
-                <option value="ring">Ring</option>
-                <option value="loose-diamond">Loose Diamond</option>
-                <option value="earrings">Earrings</option>
-                <option value="pendant">Pendant</option>
-                <option value="not-sure">Not sure yet</option>
-              </select>
-              <label class="contact-field-label contact-field-label-select" for="cf-looking-for">What are you looking for? <span aria-hidden="true">*</span></label>
-              <span class="contact-field-line" aria-hidden="true"></span>
-              <svg class="contact-field-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
             <div class="contact-field contact-field-select">
               <select class="contact-field-input" id="cf-shape" name="preferred-shape">
                 <option value="" disabled selected hidden></option>
@@ -411,21 +447,21 @@
                 <option value="radiant">Radiant</option>
                 <option value="cushion">Cushion</option>
                 <option value="princess">Princess</option>
-                <option value="other">Other</option>
+                <option value="other">Other / Open to suggestions</option>
               </select>
-              <label class="contact-field-label contact-field-label-select" for="cf-shape">Preferred Shape</label>
+              <label class="contact-field-label contact-field-label-select" for="cf-shape">Shape <span class="contact-field-optional">(optional)</span></label>
               <span class="contact-field-line" aria-hidden="true"></span>
               <svg class="contact-field-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-          </div>
-          <div class="contact-form-row contact-form-row-2col">
             <div class="contact-field">
-              <input class="contact-field-input" type="text" id="cf-carat" name="carat-range" placeholder=" " autocomplete="off"/>
-              <label class="contact-field-label" for="cf-carat">Desired Carat Range</label>
+              <input class="contact-field-input" type="text" id="cf-carat" name="carat-range" placeholder=" " autocomplete="off" />
+              <label class="contact-field-label" for="cf-carat">Carat Range <span class="contact-field-optional">(optional)</span></label>
               <span class="contact-field-line" aria-hidden="true"></span>
             </div>
+          </div>
+          <div class="contact-form-row">
             <div class="contact-field">
               <input class="contact-field-input" type="text" id="cf-budget" name="budget-range" placeholder=" " autocomplete="off" />
               <label class="contact-field-label" for="cf-budget">Budget Range <span class="contact-field-optional">(optional)</span></label>
@@ -437,12 +473,12 @@
               <legend class="contact-fieldset-legend">Timeline</legend>
               <div class="contact-chips">
                 <label class="contact-chip">
-                  <input type="radio" name="timeline" value="asap" />
-                  <span>ASAP</span>
-                </label>
-                <label class="contact-chip">
                   <input type="radio" name="timeline" value="1-3-months" />
                   <span>1–3 Months</span>
+                </label>
+                <label class="contact-chip">
+                  <input type="radio" name="timeline" value="3-6-months" />
+                  <span>3–6 Months</span>
                 </label>
                 <label class="contact-chip">
                   <input type="radio" name="timeline" value="just-exploring" />
@@ -452,18 +488,53 @@
             </fieldset>
           </div>
           <div class="contact-form-row">
-            <div class="contact-field contact-field-textarea">
-              <textarea class="contact-field-input" id="cf-details" name="additional-details" placeholder=" " rows="4" ></textarea>
-              <label class="contact-field-label" for="cf-details">Tell me your vision</label>
+            <fieldset class="contact-fieldset">
+              <legend class="contact-fieldset-legend">Contact Preference</legend>
+              <div class="contact-chips">
+                <label class="contact-chip">
+                  <input type="radio" name="contact-preference" value="instagram-dm" />
+                  <span>Instagram DM</span>
+                </label>
+                <label class="contact-chip">
+                  <input type="radio" name="contact-preference" value="email" />
+                  <span>Email</span>
+                </label>
+                <label class="contact-chip">
+                  <input type="radio" name="contact-preference" value="either" />
+                  <span>Either is fine</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="contact-form-row contact-form-row-2col">
+            <div class="contact-field">
+              <input class="contact-field-input" type="text" id="cf-name" name="full-name" placeholder=" " required autocomplete="name" />
+              <label class="contact-field-label" for="cf-name">Name <span aria-hidden="true">*</span></label>
+              <span class="contact-field-line" aria-hidden="true"></span>
+            </div>
+            <div class="contact-field">
+              <input class="contact-field-input" type="email" id="cf-email" name="email" placeholder=" " required autocomplete="email" />
+              <label class="contact-field-label" for="cf-email">Email Address <span aria-hidden="true">*</span></label>
+              <span class="contact-field-line" aria-hidden="true"></span>
+            </div>
+          </div>
+          <div class="contact-form-row">
+            <div class="contact-field">
+              <input class="contact-field-input" type="text" id="cf-instagram" name="instagram-handle" placeholder=" " autocomplete="off" />
+              <label class="contact-field-label" for="cf-instagram">Instagram Handle <span class="contact-field-optional">(optional)</span></label>
               <span class="contact-field-line" aria-hidden="true"></span>
             </div>
           </div>
           <button class="contact-submit" type="submit">
-            <span class="contact-submit-text">Submit Inquiry</span>
+            <span class="contact-submit-text">Start Your Design ✨</span>
             <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </button>
+          <p class="contact-form-ig-note">
+            Prefer to connect directly?
+            <a href="https://www.instagram.com/labbrilliancehi/" target="_blank" rel="noopener noreferrer">Message me on Instagram → @labbrilliancehi</a>
+          </p>
         </form>
         <div class="contact-thankyou" id="contact-thankyou" aria-live="polite" hidden>
           <svg class="contact-thankyou-diamond" viewBox="0 0 80 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
