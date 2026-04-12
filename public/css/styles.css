@@ -401,7 +401,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0;
+    margin: 0;
+    padding: 0;
     /* border: 2px solid red; */
   }
   
