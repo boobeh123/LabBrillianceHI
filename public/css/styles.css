@@ -1921,6 +1921,40 @@
   /* border: 2px solid red; */
 }
 
+/* Hint text beneath the vision textarea */
+.contact-field-hint {
+  margin-top: 0.4rem;
+  font-family: var(--font-caps);
+  font-size: 0.65rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: rgba(77, 107, 138, 0.5);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Instagram direct note beneath submit button */
+.contact-form-ig-note {
+  margin-top: 1.2rem;
+  font-family: var(--font-caps);
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: rgba(77, 107, 138, 0.55);
+  line-height: 1.6;
+}
+.contact-form-ig-note a {
+  color: var(--color-brand);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(77, 107, 138, 0.3);
+  padding-bottom: 1px;
+  transition: color 0.22s ease, border-color 0.22s ease;
+}
+.contact-form-ig-note a:hover {
+  color: #2e4460;
+  border-color: rgba(46, 68, 96, 0.6);
+}
+
 /**************************************************************
 * Footer
 ***************************************************************/
