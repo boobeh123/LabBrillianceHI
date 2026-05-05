@@ -17,10 +17,20 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" alt="HTML" height="50"/><img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS" height="50"/><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" height="50"/>
 
 ## Version History
+# 🛠️ LabBrillianceHI Patch 1.0.002
+📅 **Release Date:** May 30th, 2026
+
+## 📢 Developer's Notes - New section
+
+- Added a "Meet the founder" section to the webpage
+- Added `#meet` anchor to the nav, footer, and hamburger menu for `index.html, designs.html, diamonds.html, custom-design.html` 
+    - a nav-partial would be great here
+
+---------------------------------------------------------------------------------------------------------------------------
 # 🛠️ LabBrillianceHI Patch 1.0.001
 📅 **Release Date:** May 23rd, 2026
 
-## 📢 Developer's Notes - v1.01 - Bug fix
+## 📢 Developer's Notes - Bug fix
 
 - The contact form contains two `<input>` elements, both use the `required` attribute (lines 635 - 646 `index.html`)
     - The required inputs are being left blank & the form still sends 
