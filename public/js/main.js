@@ -79,6 +79,12 @@ if (contactForm && thankYou) {
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    // Validate before proceeding — re-enables native required checking
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity(); // shows the browser's native error messages
+    return;
+  }
+
     const submitBtn = contactForm.querySelector('.contact-submit');
     const submitText = submitBtn.querySelector('.contact-submit-text');
 
