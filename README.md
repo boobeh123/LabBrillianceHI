@@ -17,6 +17,21 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" alt="HTML" height="50"/><img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS" height="50"/><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" height="50"/>
 
 ## Version History
+# 🛠️ LabBrillianceHI Patch 1.0.001
+📅 **Release Date:** May 23rd, 2026
+
+## 📢 Developer's Notes - v1.01 - Bug fix
+
+- The contact form contains two `<input>` elements, both use the `required` attribute (lines 635 - 646 `index.html`)
+    - The required inputs are being left blank & the form still sends 
+
+- The submission handler calls `event.preventDefault()` before the browser ever gets a chance to run its built-in validation (lines 71-114 `main.js`)
+    - By intercepting it first with `e.preventDefault()`, we're bypassing the browser's validation 
+        - So the form submits regardless of whether those fields are filled
+
+- The fix is to manually check validity before preventing the default.
+    - This can be done using the browser's `HTMLInputElement` API and calling the built-in `checkValidity()` & `reportValidity()` methods
+---------------------------------------------------------------------------------------------------------------------------
 # 🛠️ LabBrillianceHI Patch 1.0.000
 📅 **Release Date:** April 12th, 2026
 
