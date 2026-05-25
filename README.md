@@ -25,6 +25,7 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 - Added a "Meet the founder" section to the webpage
 - Added `#meet` anchor to the nav, footer, and hamburger menu for `index.html, designs.html, diamonds.html, custom-design.html` 
     - a nav-partial would be great here
+- Update wording on policy 6 & 10 within `FAQ` section
 
 ---------------------------------------------------------------------------------------------------------------------------
 # 🛠️ LabBrillianceHI Patch 1.0.001
