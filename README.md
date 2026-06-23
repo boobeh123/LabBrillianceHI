@@ -17,6 +17,14 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" alt="HTML" height="50"/><img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS" height="50"/><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" height="50"/>
 
 ## Version History
+# 🛠️ LabBrillianceHI Patch 1.0.003
+📅 **Release Date:** June 22nd, 2026
+
+## 📢 Developer's Notes - Policies & information page
+
+- Added a `policies.html` landing page 
+    - Different than the FAQ/policies accordion on the home route
+---------------------------------------------------------------------------------------------------------------------------
 # 🛠️ LabBrillianceHI Patch 1.0.002
 📅 **Release Date:** May 30th, 2026
 
