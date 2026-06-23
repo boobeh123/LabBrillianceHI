@@ -3089,6 +3089,397 @@ Custom Design redirect
 .cd-alt-btn:hover svg { transform: translateX(4px); }
 
 /**************************************************************
+* Policies & Information page (policies.html)
+***************************************************************/
+
+.pol-header {
+  background: #fff;
+  padding: 8rem 2rem 3rem;
+  border-bottom: 1px solid #e8eef4;
+  text-align: center;
+}
+
+.pol-header-script {
+  display: block;
+  font-family: var(--font-caps);
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-brand);
+  margin-bottom: 0.8rem;
+}
+
+.pol-header-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 400;
+  color: #2e4460;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin: 0 0 0.9rem;
+}
+
+.pol-header-sub {
+  font-family: var(--font-caps);
+  font-size: 0.82rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: #6a8aaa;
+  line-height: 1.6;
+}
+
+.pol-header-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  color: var(--color-brand);
+  opacity: 0.3;
+}
+.pol-header-divider svg { width: 16px; height: auto; }
+.pol-header-rule {
+  display: block;
+  width: clamp(40px, 8vw, 80px);
+  height: 1px;
+  background: currentColor;
+}
+
+/* ── Jump navigation ── */
+.pol-jumpnav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem 0;
+  padding-bottom: 0.5rem;
+}
+.pol-jumpnav-link {
+  font-family: var(--font-caps);
+  font-size: 0.68rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-brand);
+  text-decoration: none;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.pol-jumpnav-link:hover {
+  color: #2e4460;
+  border-color: rgba(46, 68, 96, 0.4);
+}
+.pol-jumpnav-sep {
+  font-family: var(--font-caps);
+  color: rgba(77, 107, 138, 0.35);
+  font-size: 0.7rem;
+  margin: 0 0.65rem;
+  user-select: none;
+}
+
+/* ── Main layout: sidebar + document ── */
+.pol-main {
+  background: #fff;
+  min-height: 60vh;
+}
+
+.pol-document {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  gap: 0 4rem;
+  align-items: start;
+}
+
+/* ── Individual section ── */
+.pol-section {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0 4rem;
+  padding: 3.5rem 0;
+  border-bottom: 1px solid #eef2f7;
+  align-items: start;
+}
+.pol-section:last-child {
+  border-bottom: none;
+}
+
+/* Accent section (Warranty) */
+.pol-section-accent {
+  background: #f6f9fc;
+  margin: 0 -2rem;
+  padding: 3.5rem 2rem;
+}
+
+/* Contact section */
+.pol-section-contact {
+  border-bottom: none;
+  padding-bottom: 5rem;
+}
+
+/* Left: section label */
+.pol-section-label {
+  font-family: var(--font-caps);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(77, 107, 138, 0.55);
+  padding-top: 0.4rem;
+  position: sticky;
+  top: 5.5rem;
+}
+
+/* Right: section content */
+.pol-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.pol-section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+  font-weight: 400;
+  color: #2e4460;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  margin: 0 0 1.4rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid #e8eef4;
+}
+
+/* ── Sub-sections ── */
+.pol-subsection {
+  margin-top: 1.8rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid #f0f4f8;
+}
+.pol-subsection:first-of-type {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.pol-subsection-title {
+  font-family: var(--font-caps);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-brand);
+  margin: 0 0 0.9rem;
+}
+
+/* ── Body text ── */
+.pol-body-text {
+  font-family: var(--font-caps);
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: #3d5570;
+  line-height: 1.9;
+  margin: 0 0 0.9rem;
+}
+.pol-body-text:last-of-type {
+  margin-bottom: 0;
+}
+
+.pol-body-note {
+  font-family: var(--font-caps);
+  font-size: 0.76rem;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: #6a8aaa;
+  font-style: italic;
+  line-height: 1.7;
+  margin-top: 1.2rem;
+  padding: 0.9rem 1.2rem;
+  border-left: 2px solid rgba(77, 107, 138, 0.25);
+  background: rgba(77, 107, 138, 0.04);
+  border-radius: 0 2px 2px 0;
+}
+
+/* ── Lists ── */
+.pol-list {
+  margin: 0.8rem 0 0.9rem 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.pol-list li {
+  font-family: var(--font-caps);
+  font-size: 0.83rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: #3d5570;
+  line-height: 1.65;
+  padding-left: 1.4rem;
+  position: relative;
+}
+.pol-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: rgba(77, 107, 138, 0.4);
+  font-size: 0.7rem;
+}
+
+.pol-list-ordered {
+  counter-reset: pol-counter;
+}
+.pol-list-ordered li {
+  counter-increment: pol-counter;
+  padding-left: 2rem;
+}
+.pol-list-ordered li::before {
+  content: counter(pol-counter, decimal-leading-zero);
+  font-family: var(--font-caps);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: rgba(77, 107, 138, 0.5);
+  font-weight: 400;
+  top: 0.15rem;
+}
+
+/* ── Warranty covered/not-covered grid ── */
+.pol-covered-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.8rem 0;
+}
+
+.pol-covered-block {
+  padding: 1.4rem 1.6rem;
+  border-radius: 3px;
+}
+.pol-covered-block-yes {
+  background: rgba(100, 160, 130, 0.08);
+  border: 1px solid rgba(100, 160, 130, 0.2);
+}
+.pol-covered-block-no {
+  background: rgba(180, 130, 80, 0.07);
+  border: 1px solid rgba(180, 130, 80, 0.18);
+}
+
+.pol-covered-title {
+  font-family: var(--font-caps);
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin: 0 0 0.9rem;
+}
+.pol-covered-block-yes .pol-covered-title { color: #4a8a68; }
+.pol-covered-block-no  .pol-covered-title { color: #9a6a35; }
+
+.pol-covered-block .pol-list li::before {
+  color: inherit;
+  opacity: 0.5;
+}
+
+/* ── Contact buttons ── */
+.pol-contact-actions {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-top: 1.4rem;
+}
+
+.pol-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-caps);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.75rem 1.8rem;
+  border-radius: 2px;
+  transition: background 0.22s ease, border-color 0.22s ease,
+              color 0.22s ease, transform 0.2s ease;
+}
+.pol-contact-btn svg { transition: transform 0.22s ease; }
+.pol-contact-btn:hover svg { transform: translateX(4px); }
+
+.pol-contact-btn-primary {
+  background: var(--color-brand);
+  color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 16px rgba(77, 107, 138, 0.25);
+}
+.pol-contact-btn-primary:hover {
+  background: var(--color-brand-dark);
+  transform: translateY(-1px);
+}
+
+.pol-contact-btn-outline {
+  background: transparent;
+  color: var(--color-brand);
+  border: 1px solid rgba(77, 107, 138, 0.45);
+}
+.pol-contact-btn-outline:hover {
+  background: rgba(77, 107, 138, 0.06);
+  border-color: rgba(77, 107, 138, 0.7);
+  transform: translateY(-1px);
+}
+
+/**************************************************************
+* Policies page – Responsive
+***************************************************************/
+
+@media (max-width: 760px) {
+  .pol-document {
+    grid-template-columns: 1fr;
+    padding: 0 1.25rem;
+    gap: 0;
+  }
+  .pol-section {
+    grid-column: 1;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 2.5rem 0;
+  }
+  .pol-section-accent {
+    margin: 0 -1.25rem;
+    padding: 2.5rem 1.25rem;
+  }
+  .pol-section-label {
+    position: static;
+    margin-bottom: 0.6rem;
+  }
+  .pol-section-title {
+    font-size: 1.2rem;
+  }
+  .pol-covered-grid {
+    grid-template-columns: 1fr;
+  }
+  .pol-jumpnav {
+    gap: 0.35rem 0;
+  }
+  .pol-contact-actions {
+    flex-direction: column;
+  }
+  .pol-contact-btn {
+    justify-content: center;
+  }
+  .pol-header {
+    padding: 6.5rem 1.25rem 2.5rem;
+  }
+}
+
+
+/**************************************************************
 Animations
 ***************************************************************/
 
