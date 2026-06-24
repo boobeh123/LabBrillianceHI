@@ -3739,6 +3739,10 @@ Media queries
   }
   .founder-cluster-img-back  { width: 58%; height: 210px; }
   .founder-cluster-img-front { width: 54%; height: 190px; bottom: 20px; }
+
+  .btn-policies {
+    margin: .25rem 0;
+  }
 }
 
   @media (max-width: 480px) {
