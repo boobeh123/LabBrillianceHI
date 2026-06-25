@@ -301,6 +301,12 @@ Nav
   transition-delay: 0.50s;
 }
 
+.nav-overlay.open .nav-overlay-link:nth-child(9) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.56s;
+}
+
 .nav-overlay-link:hover {
   color: #e8eef4;
 }
