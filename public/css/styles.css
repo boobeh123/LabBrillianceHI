@@ -1852,6 +1852,7 @@ Contact
   flex-wrap: wrap;
 }
 .contact-chip {
+  position: relative;
   cursor: pointer;
 }
 .contact-chip input {
@@ -1881,6 +1882,11 @@ Contact
 .contact-chip:hover span {
   border-color: var(--color-brand);
   color: var(--color-brand);
+}
+/* The radio itself is invisible, so its chip shows the keyboard focus */
+.contact-chip input:focus-visible + span {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
 }
 
 .contact-submit {
