@@ -8,7 +8,8 @@ Custom CSS
     --color-text-muted: rgba(255, 255, 255, 0.65);
     --color-btn-fill:   rgba(77, 107, 138, 0.82);
     --color-btn-hover:  rgba(58,  84, 112, 0.92);
-  
+    --color-error:      #9b2c2c;
+
     --font-serif:  'Cormorant Garamond', Georgia, serif;
     --font-script: 'Great Vibes', cursive;
     --font-caps:   'Raleway', sans-serif;
@@ -77,11 +78,8 @@ Nav
   align-items: center;
   gap: 0.6rem;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.9);
-  transition: color 0.45s ease;
-}
-.nav.scrolled .nav-brand {
   color: #2e4460;
+  transition: color 0.45s ease;
 }
 
 .nav-brand-diamond {
@@ -116,7 +114,7 @@ Nav
   letter-spacing: 0.16em;
   text-transform: uppercase;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
+  color: #3c5673;
   position: relative;
   transition: color 0.45s ease;
 }
@@ -138,31 +136,20 @@ Nav
   width: 100%;
 }
 .nav-link:hover {
-  color: rgba(255,255,255,1);
-}
-.nav.scrolled .nav-link:hover {
   color: #2e4460;
 }
 
 .nav-link-cta {
   padding: 0.5rem 1.2rem;
-  border: 1px solid rgba(255,255,255,0.45);
+  border: 1px solid rgba(77,107,138,0.5);
   border-radius: 2px;
-  color: rgba(255,255,255,0.9) !important;
+  color: #2e4460 !important;
   transition: background 0.25s ease, border-color 0.25s ease, color 0.45s ease;
 }
 .nav-link-cta::after {
   display: none;
 }
 .nav-link-cta:hover {
-  background: rgba(255,255,255,0.12);
-  border-color: rgba(255,255,255,0.75);
-}
-.nav.scrolled .nav-link-cta {
-  border-color: rgba(77,107,138,0.5);
-  color: #2e4460 !important;
-}
-.nav.scrolled .nav-link-cta:hover {
   background: rgba(77,107,138,0.08);
   border-color: rgba(77,107,138,0.85);
 }
@@ -183,7 +170,7 @@ Nav
 .nav-hamburger-bar {
   display: block;
   height: 1px;
-  background: rgba(255,255,255,0.85);
+  background: #2e4460;
   border-radius: 1px;
   transform-origin: center;
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, background 0.45s ease, width 0.3s ease;
@@ -196,10 +183,6 @@ Nav
 }
 .nav-hamburger-bar:nth-child(3) {
   width: 24px;
-}
-
-.nav.scrolled .nav-hamburger-bar {
-  background: #2e4460;
 }
 
 /* Animate to X when open */
@@ -216,6 +199,14 @@ Nav
   transform: translateY(-6px) rotate(-45deg);
 }
 
+/* Menu open at the top of the homepage: the nav is see-through over the dark overlay, so switch to light colors */
+.nav:not(.scrolled):not(.nav-scrolled-always):has(.nav-hamburger[aria-expanded="true"]) .nav-brand {
+  color: rgba(255, 255, 255, 0.9);
+}
+.nav:not(.scrolled):not(.nav-scrolled-always):has(.nav-hamburger[aria-expanded="true"]) .nav-hamburger-bar {
+  background: rgba(255, 255, 255, 0.85);
+}
+
 .nav-overlay {
   position: fixed;
   inset: 0;
@@ -224,8 +215,9 @@ Nav
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 0;
+  padding: 6rem 1.5rem;
+  overflow-y: auto;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease;
@@ -235,11 +227,13 @@ Nav
   visibility: visible;
 }
 
+/* Auto margins centre the menu, and let it scroll instead of cutting links off on short screens */
 .nav-overlay-links {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.2rem;
+  margin-top: auto;
 }
 
 .nav-overlay-link {
@@ -316,6 +310,7 @@ Nav
   font-size: clamp(1.4rem, 4vw, 2rem);
   color: rgba(77, 107, 138, 0.5);
   margin-top: 2.5rem;
+  margin-bottom: auto;
   opacity: 0;
   transition: opacity 0.4s ease 0.35s;
 }
@@ -1029,7 +1024,7 @@ Gallery panel collection
   transition: max-height 0.4s ease, opacity 0.35s ease 0.05s;
 }
 .collection-card:hover .collection-card-desc {
-  max-height: 80px;
+  max-height: 8rem;
   opacity: 1;
 }
 
@@ -1330,19 +1325,25 @@ Policies section
   color: #8baac8;
 }
 
+/* Grows from 0fr to 1fr so any answer length fits; visibility keeps closed answers away from screen readers */
 .policies-item-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-              padding 0.35s ease;
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              padding 0.35s ease,
+              visibility 0.4s;
   padding: 0 0 0 3.2rem;
 }
 .policies-item-body.open {
-  max-height: 200px;
+  grid-template-rows: 1fr;
+  visibility: visible;
   padding: 0 0 1.4rem 3.2rem;
 }
 
 .policies-item-body p {
+  min-height: 0;
+  overflow: hidden;
   font-family: var(--font-caps);
   font-size: 0.85rem;
   font-weight: 300;
@@ -1707,6 +1708,13 @@ Contact
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
+  transition: opacity 0.4s ease;
+}
+.contact-form.fade-out {
+  opacity: 0;
+}
+.contact-form[hidden] {
+  display: none;
 }
 
 .contact-form-honeypot {
@@ -1906,6 +1914,19 @@ Contact
 }
 .contact-submit:hover svg {
   transform: translateX(4px);
+}
+
+/* Error message under the submit button, filled in by main.js when sending fails */
+.contact-form-error {
+  font-family: var(--font-caps);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  color: var(--color-error);
+}
+.contact-form-error:not(:empty) {
+  margin-top: 1rem;
 }
 .contact-thankyou {
   display: flex;
@@ -3508,6 +3529,17 @@ Animations
 /**************************************************************
 Media queries
 ***************************************************************/
+/* Below this width the nav links no longer fit on one row (measured: 960px on index, 1030px on the other pages).
+   Keep in sync with the matchMedia query in main.js */
+@media (max-width: 1080px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-hamburger {
+    display: flex;
+  }
+}
+
 @media (max-width: 900px) {
   .collection-grid {
     grid-template-columns: 1fr;
@@ -3528,7 +3560,7 @@ Media queries
 
   .collection-card-desc {
     opacity: 1;
-    max-height: 80px;
+    max-height: 8rem;
   }
 
   .collection-card-btn {
@@ -3657,14 +3689,8 @@ Media queries
   .about-pull {
     gap: 0.5rem;
   }
-  .nav-links { 
-    display: none;
-  }
-  .nav-hamburger {
-    display: flex;
-  }
 
-  .experience-timeline::before { 
+  .experience-timeline::before {
     left: 24px; 
   }
 
@@ -3810,3 +3836,13 @@ Media queries
       padding: 5rem 1.25rem 4rem;
     }
   }
+
+/* Short screens (phones turned sideways): smaller menu links so the open menu fits */
+@media (max-height: 560px) {
+  .nav-overlay-link {
+    font-size: clamp(1.5rem, 8vh, 2.2rem);
+  }
+  .nav-overlay-tagline {
+    margin-top: 1.5rem;
+  }
+}
