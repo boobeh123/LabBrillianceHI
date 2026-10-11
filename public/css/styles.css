@@ -5,10 +5,14 @@ Custom CSS
     --color-brand:      #4d6b8a;
     --color-brand-dark: #3a5470;
     --color-text-light: rgba(255, 255, 255, 0.92);
-    --color-text-muted: rgba(255, 255, 255, 0.65);
-    --color-btn-fill:   rgba(77, 107, 138, 0.82);
+    --color-btn-fill:   #4d6b8a;
     --color-btn-hover:  rgba(58,  84, 112, 0.92);
     --color-error:      #9b2c2c;
+
+    /* Text colours that pass WCAG AA (4.5:1) on every background they sit on */
+    --color-text:            #3d5570;
+    --color-text-muted:      #536f8e;
+    --color-text-muted-dark: #7c98b4;
 
     --font-serif:  'Cormorant Garamond', Georgia, serif;
     --font-script: 'Great Vibes', cursive;
@@ -333,7 +337,7 @@ Nav
 .nav-overlay-tagline {
   font-family: var(--font-script);
   font-size: clamp(1.4rem, 4vw, 2rem);
-  color: rgba(77, 107, 138, 0.5);
+  color: var(--color-text-muted-dark);
   margin-top: 2.5rem;
   margin-bottom: auto;
   opacity: 0;
@@ -413,7 +417,7 @@ Hero
     font-weight: 300;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: #4d6b8a;
+    color: #3c5673;
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -459,7 +463,7 @@ Hero
     font-size: clamp(0.78rem, 2vw, 0.9rem);
     font-weight: 300;
     letter-spacing: 0.04em;
-    color: rgba(61, 88, 115, 0.8);
+    color: #2e4460;
   }
   
   .hero-ctas {
@@ -556,7 +560,7 @@ Experience section
   font-size: 0.82rem;
   font-weight: 300;
   letter-spacing: 0.1em;
-  color: #6a8aaa;
+  color: var(--color-text-muted);
 }
 
 /* ── Timeline container ── */
@@ -653,7 +657,7 @@ Experience section
   font-weight: 400;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(77, 107, 138, 0.5);
+  color: var(--color-text-muted);
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -680,7 +684,7 @@ Experience section
   font-size: 0.72rem;
   font-weight: 300;
   letter-spacing: 0.04em;
-  color: rgba(77, 107, 138, 0.55);
+  color: var(--color-text-muted);
   line-height: 1.7;
   font-style: italic;
 }
@@ -868,7 +872,7 @@ Gallery panel collection
   font-size: 0.82rem;
   font-weight: 300;
   letter-spacing: 0.1em;
-  color: #6a8aaa;
+  color: var(--color-text-muted);
 }
 
 .collection-grid {
@@ -1044,7 +1048,7 @@ Gallery panel collection
   font-size: 0.78rem;
   font-weight: 300;
   letter-spacing: 0.03em;
-  color: rgba(255,255,255,0.72);
+  color: rgba(255,255,255,0.9);
   line-height: 1.55;
   max-width: 26ch;
   max-height: 0;
@@ -1283,7 +1287,7 @@ Policies section
   font-size: 0.8rem;
   font-weight: 300;
   letter-spacing: 0.08em;
-  color: #6a8aaa;
+  color: var(--color-text-muted-dark);
   max-width: 48ch;
   margin-left: auto;
   margin-right: auto;
@@ -1331,7 +1335,7 @@ Policies section
   font-size: 0.62rem;
   font-weight: 300;
   letter-spacing: 0.18em;
-  color: #4d6b8a;
+  color: var(--color-text-muted-dark);
   flex-shrink: 0;
   width: 2rem;
 }
@@ -1399,7 +1403,7 @@ Policies section
   font-size: 0.8rem;
   font-weight: 300;
   letter-spacing: 0.1em;
-  color: #4d6b8a;
+  color: var(--color-text-muted-dark);
   margin-bottom: 1.2rem;
 }
 
@@ -1435,7 +1439,7 @@ Policies section
 .founder {
   background: #faf7f2;
   padding: 7rem 2rem;
-  overflow: hidden;
+  overflow: clip; /* clips like hidden, but lets the photo column stay pinned while scrolling */
 }
 
 .founder-inner {
@@ -1449,8 +1453,6 @@ Policies section
 
 /* ── Portrait column ── */
 .founder-portrait-col {
-  position: sticky;
-  top: 5rem;
   opacity: 0;
   transform: translateX(-28px);
   transition: opacity 0.9s ease, transform 0.9s ease;
@@ -1529,7 +1531,7 @@ Policies section
   font-weight: 400;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(139, 100, 60, 0.6);
+  color: #856b54;
   margin-bottom: 0.8rem;
 }
 
@@ -1560,7 +1562,7 @@ Policies section
   font-size: clamp(0.85rem, 1.4vw, 0.95rem);
   font-weight: 300;
   font-style: italic;
-  color: rgba(77, 107, 138, 0.65);
+  color: var(--color-text-muted);
   line-height: 1.75;
   letter-spacing: 0.01em;
   padding-top: 1.2rem;
@@ -1631,7 +1633,7 @@ Contact
 .contact {
   background: #f4f7f9;
   padding: 7rem 2rem;
-  overflow: hidden;
+  overflow: clip; /* clips like hidden, but lets the intro column stay pinned while scrolling */
 }
 
 .contact-inner {
@@ -1646,8 +1648,6 @@ Contact
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.85s ease, transform 0.85s ease;
-  position: sticky;
-  top: 3rem;
 }
 .contact-intro.in-view {
   opacity: 1;
@@ -1678,7 +1678,7 @@ Contact
   font-size: 0.82rem;
   font-weight: 300;
   letter-spacing: 0.06em;
-  color: #6a8aaa;
+  color: var(--color-text-muted);
   line-height: 1.75;
   max-width: 30ch;
 }
@@ -1796,7 +1796,7 @@ Contact
   font-size: 0.78rem;
   font-weight: 300;
   letter-spacing: 0.08em;
-  color: #8aabca;
+  color: var(--color-text-muted);
   pointer-events: none;
   transition: top 0.22s ease, font-size 0.22s ease, color 0.22s ease;
 }
@@ -1826,7 +1826,7 @@ Contact
 .contact-field-optional {
   font-size: 0.6rem;
   letter-spacing: 0.1em;
-  color: #a0bcd0;
+  color: var(--color-text-muted);
   text-transform: uppercase;
 }
 
@@ -1902,7 +1902,7 @@ Contact
   padding: 0.4rem 1rem;
   border: 1px solid #c8d8e8;
   border-radius: 2px;
-  color: #6a8aaa;
+  color: var(--color-text-muted);
   transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 .contact-chip input:checked + span {
@@ -1995,7 +1995,7 @@ Contact
   font-size: 0.85rem;
   font-weight: 300;
   letter-spacing: 0.06em;
-  color: #6a8aaa;
+  color: var(--color-text-muted);
   line-height: 1.75;
 }
 .contact-thankyou-sign {
@@ -2012,7 +2012,7 @@ Contact
   font-size: 0.65rem;
   font-weight: 300;
   letter-spacing: 0.06em;
-  color: rgba(77, 107, 138, 0.5);
+  color: var(--color-text-muted);
   font-style: italic;
   line-height: 1.5;
 }
@@ -2024,7 +2024,7 @@ Contact
   font-size: 0.72rem;
   font-weight: 300;
   letter-spacing: 0.05em;
-  color: rgba(77, 107, 138, 0.55);
+  color: var(--color-text-muted);
   line-height: 1.6;
 }
 .contact-form-ig-note a {
@@ -2082,7 +2082,7 @@ Footer
   font-weight: 300;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(139, 170, 200, 0.45);
+  color: var(--color-text-muted-dark);
 }
 
 .footer-rule-wrap {
@@ -2126,7 +2126,7 @@ Footer
   font-weight: 400;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: rgba(139, 170, 200, 0.5);
+  color: var(--color-text-muted-dark);
   margin-bottom: 1.2rem;
 }
 
@@ -2145,7 +2145,7 @@ Footer
   font-weight: 300;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(139, 170, 200, 0.45);
+  color: var(--color-text-muted-dark);
   margin-bottom: 1.2rem;
 }
 
@@ -2154,7 +2154,7 @@ Footer
   font-size: 0.78rem;
   font-weight: 300;
   letter-spacing: 0.03em;
-  color: rgba(139, 170, 200, 0.5);
+  color: var(--color-text-muted-dark);
   line-height: 1.8;
   max-width: 28ch;
 }
@@ -2171,7 +2171,7 @@ Footer
   font-size: 0.78rem;
   font-weight: 300;
   letter-spacing: 0.08em;
-  color: rgba(139, 170, 200, 0.6);
+  color: #8baac8;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -2186,7 +2186,7 @@ Footer
   transition: opacity 0.22s ease, transform 0.22s ease;
 }
 .footer-nav-link:hover {
-  color: #8baac8;
+  color: #b8d0e8;
   gap: 0.6rem;
 }
 .footer-nav-link:hover::before {
@@ -2199,7 +2199,7 @@ Footer
   font-size: 0.78rem;
   font-weight: 300;
   letter-spacing: 0.03em;
-  color: rgba(139, 170, 200, 0.5);
+  color: var(--color-text-muted-dark);
   line-height: 1.8;
   margin-bottom: 1.2rem;
 }
@@ -2247,7 +2247,7 @@ Footer
   font-size: 0.65rem;
   font-weight: 300;
   letter-spacing: 0.1em;
-  color: rgba(139, 170, 200, 0.3);
+  color: var(--color-text-muted-dark);
 }
 
 .footer-igi {
@@ -2255,7 +2255,7 @@ Footer
   font-size: 0.65rem;
   font-weight: 300;
   letter-spacing: 0.1em;
-  color: rgba(139, 170, 200, 0.3);
+  color: var(--color-text-muted-dark);
 }
 
 /**************************************************************
@@ -2314,7 +2314,7 @@ Available Diamonds Redirect
   font-size: 0.82rem;
   font-weight: 300;
   letter-spacing: 0.1em;
-  color: #6a8aaa;
+  color: var(--color-text);
   line-height: 1.75;
   max-width: 52ch;
   margin-left: auto;
@@ -2374,7 +2374,7 @@ Available Diamonds Redirect
   left: 0;
   right: 0;
   padding: 2rem 1.4rem 1.4rem;
-  background: linear-gradient(to top, rgba(17, 29, 43, 0.88) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(17, 29, 43, 0.92) 0%, rgba(17, 29, 43, 0.85) 70%, rgba(17, 29, 43, 0) 100%);
 }
 .diamond-card-cut {
   font-family: var(--font-caps);
@@ -2382,7 +2382,7 @@ Available Diamonds Redirect
   font-weight: 400;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(184, 208, 232, 0.7);
+  color: #c8daea;
   margin-bottom: 0.3rem;
 }
 .diamond-card-name {
@@ -2405,7 +2405,7 @@ Available Diamonds Redirect
   font-weight: 300;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(184, 208, 232, 0.6);
+  color: #c8daea;
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.12);
   padding: 0.2rem 0.55rem;
@@ -2437,7 +2437,7 @@ Available Diamonds Redirect
   font-size: 0.78rem;
   font-weight: 300;
   letter-spacing: 0.08em;
-  color: #6a8aaa;
+  color: var(--color-text-muted-dark);
   line-height: 1.75;
   max-width: 28ch;
 }
@@ -2498,7 +2498,7 @@ Designs page redirect
   font-size: 0.82rem;
   font-weight: 300;
   letter-spacing: 0.08em;
-  color: #6a8aaa;
+  color: var(--color-text-muted);
   line-height: 1.8;
   max-width: 58ch;
   margin-left: auto;
@@ -2611,7 +2611,7 @@ Designs page redirect
   font-weight: 400;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(77, 107, 138, 0.45);
+  color: var(--color-text-muted);
 }
 .design-copy-title {
   font-family: var(--font-serif);
@@ -2635,7 +2635,7 @@ Designs page redirect
   font-size: 0.7rem;
   font-weight: 300;
   letter-spacing: 0.12em;
-  color: rgba(77, 107, 138, 0.55);
+  color: var(--color-text-muted);
   text-transform: uppercase;
   margin-top: 0.2rem;
 }
@@ -2710,7 +2710,7 @@ Designs page redirect
   font-size: 0.8rem;
   font-weight: 300;
   letter-spacing: 0.06em;
-  color: #6a8aaa;
+  color: var(--color-text-muted-dark);
   line-height: 1.8;
   max-width: 40ch;
 }
@@ -2814,7 +2814,7 @@ Custom Design redirect
   font-size: 0.82rem;
   font-weight: 300;
   letter-spacing: 0.05em;
-  color: rgba(139, 170, 200, 0.7);
+  color: var(--color-text-muted-dark);
   line-height: 1.85;
   max-width: 36ch;
   position: relative;
@@ -2860,7 +2860,7 @@ Custom Design redirect
   font-weight: 400;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(77, 107, 138, 0.5);
+  color: var(--color-text-muted);
   text-align: center;
   margin-bottom: 2.5rem;
 }
@@ -2910,7 +2910,7 @@ Custom Design redirect
   font-family: var(--font-caps);
   font-size: 0.55rem;
   letter-spacing: 0.2em;
-  color: rgba(77,107,138,0.4);
+  color: var(--color-text-muted);
 }
 .cd-process-title {
   font-family: var(--font-serif);
@@ -2924,7 +2924,7 @@ Custom Design redirect
   font-size: 0.72rem;
   font-weight: 300;
   letter-spacing: 0.04em;
-  color: #6a8aaa;
+  color: var(--color-text-muted);
   line-height: 1.6;
 }
 
@@ -3054,7 +3054,7 @@ Custom Design redirect
   font-size: 0.8rem;
   font-weight: 300;
   letter-spacing: 0.06em;
-  color: #6a8aaa;
+  color: var(--color-text-muted-dark);
   line-height: 1.8;
   max-width: 38ch;
 }
@@ -3126,7 +3126,7 @@ Custom Design redirect
   font-size: 0.78rem;
   font-weight: 300;
   letter-spacing: 0.06em;
-  color: #6a8aaa;
+  color: var(--color-text-muted);
   line-height: 1.75;
 }
 .cd-alt-btn {
@@ -3186,7 +3186,7 @@ Custom Design redirect
   font-size: 0.82rem;
   font-weight: 300;
   letter-spacing: 0.08em;
-  color: #6a8aaa;
+  color: var(--color-text-muted);
   line-height: 1.6;
 }
 
@@ -3290,7 +3290,7 @@ Custom Design redirect
   font-weight: 400;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(77, 107, 138, 0.55);
+  color: var(--color-text-muted);
   padding-top: 0.4rem;
   position: sticky;
   top: 5.5rem;
@@ -3356,7 +3356,7 @@ Custom Design redirect
   font-size: 0.76rem;
   font-weight: 300;
   letter-spacing: 0.03em;
-  color: #6a8aaa;
+  color: var(--color-text-muted);
   font-style: italic;
   line-height: 1.7;
   margin-top: 1.2rem;
@@ -3439,8 +3439,8 @@ Custom Design redirect
   text-transform: uppercase;
   margin: 0 0 0.9rem;
 }
-.pol-covered-block-yes .pol-covered-title { color: #4a8a68; }
-.pol-covered-block-no  .pol-covered-title { color: #9a6a35; }
+.pol-covered-block-yes .pol-covered-title { color: #3e7759; }
+.pol-covered-block-no  .pol-covered-title { color: #906331; }
 
 .pol-covered-block .pol-list li::before {
   color: inherit;
@@ -3574,6 +3574,15 @@ Media queries
   }
 }
 
+/* Pin the founder photo and contact intro while their sections scroll, only where the photo fits on screen */
+@media (min-width: 861px) and (min-height: 900px) {
+  .founder-portrait-col,
+  .contact-intro {
+    position: sticky;
+    top: 5rem;
+  }
+}
+
 @media (max-width: 900px) {
   .collection-grid {
     grid-template-columns: 1fr;
@@ -3615,7 +3624,6 @@ Media queries
     gap: 3rem;
   }
   .contact-intro {
-    position: static;
     text-align: center;
   }
   .contact-intro-sub {
@@ -3680,7 +3688,6 @@ Media queries
     gap: 3rem;
   }
   .founder-portrait-col {
-    position: static;
     max-width: 480px;
     margin: 0 auto;
     width: 100%;
@@ -3877,5 +3884,17 @@ Media queries
   }
   .nav-overlay-tagline {
     margin-top: 1.5rem;
+  }
+}
+
+/* Visitors who ask their device for less motion: no floating, fading or smooth scrolling */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
