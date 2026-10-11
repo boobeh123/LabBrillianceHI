@@ -189,3 +189,10 @@ closeLinks.forEach((link) => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && overlay.classList.contains('open')) closeMenu();
 });
+
+// Close if the window widens past the menu-button breakpoint (max-width: 1080px in styles.css),
+// e.g. a tablet rotated while the menu is open, where the button that closes it disappears
+const wideScreen = window.matchMedia('(min-width: 1081px)');
+wideScreen.addEventListener('change', (e) => {
+  if (e.matches && overlay.classList.contains('open')) closeMenu();
+});

@@ -215,8 +215,9 @@ Nav
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 0;
+  padding: 5rem 1.5rem;
+  overflow-y: auto;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease;
@@ -226,11 +227,13 @@ Nav
   visibility: visible;
 }
 
+/* Auto margins centre the menu, and let it scroll instead of cutting links off on short screens */
 .nav-overlay-links {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.2rem;
+  margin-top: auto;
 }
 
 .nav-overlay-link {
@@ -307,6 +310,7 @@ Nav
   font-size: clamp(1.4rem, 4vw, 2rem);
   color: rgba(77, 107, 138, 0.5);
   margin-top: 2.5rem;
+  margin-bottom: auto;
   opacity: 0;
   transition: opacity 0.4s ease 0.35s;
 }
@@ -3525,6 +3529,17 @@ Animations
 /**************************************************************
 Media queries
 ***************************************************************/
+/* Below this width the nav links no longer fit on one row (measured: 960px on index, 1030px on the other pages).
+   Keep in sync with the matchMedia query in main.js */
+@media (max-width: 1080px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-hamburger {
+    display: flex;
+  }
+}
+
 @media (max-width: 900px) {
   .collection-grid {
     grid-template-columns: 1fr;
@@ -3674,14 +3689,8 @@ Media queries
   .about-pull {
     gap: 0.5rem;
   }
-  .nav-links { 
-    display: none;
-  }
-  .nav-hamburger {
-    display: flex;
-  }
 
-  .experience-timeline::before { 
+  .experience-timeline::before {
     left: 24px; 
   }
 
@@ -3827,3 +3836,13 @@ Media queries
       padding: 5rem 1.25rem 4rem;
     }
   }
+
+/* Short screens (phones turned sideways): smaller menu links so the open menu fits */
+@media (max-height: 560px) {
+  .nav-overlay-link {
+    font-size: clamp(1.5rem, 8vh, 2.2rem);
+  }
+  .nav-overlay-tagline {
+    margin-top: 1.5rem;
+  }
+}
