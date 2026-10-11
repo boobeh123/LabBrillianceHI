@@ -41,6 +41,27 @@ Base styles
 Nav
 ***************************************************************/
 
+/* Hidden above the page until a keyboard user tabs to it */
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 200;
+  padding: 0.6rem 1.1rem;
+  background: #2e4460;
+  color: #fff;
+  font-family: var(--font-caps);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border-radius: 2px;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 .nav {
   position: fixed;
   top: 0;
