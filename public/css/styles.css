@@ -78,11 +78,8 @@ Nav
   align-items: center;
   gap: 0.6rem;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.9);
-  transition: color 0.45s ease;
-}
-.nav.scrolled .nav-brand {
   color: #2e4460;
+  transition: color 0.45s ease;
 }
 
 .nav-brand-diamond {
@@ -117,7 +114,7 @@ Nav
   letter-spacing: 0.16em;
   text-transform: uppercase;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
+  color: #3c5673;
   position: relative;
   transition: color 0.45s ease;
 }
@@ -139,31 +136,20 @@ Nav
   width: 100%;
 }
 .nav-link:hover {
-  color: rgba(255,255,255,1);
-}
-.nav.scrolled .nav-link:hover {
   color: #2e4460;
 }
 
 .nav-link-cta {
   padding: 0.5rem 1.2rem;
-  border: 1px solid rgba(255,255,255,0.45);
+  border: 1px solid rgba(77,107,138,0.5);
   border-radius: 2px;
-  color: rgba(255,255,255,0.9) !important;
+  color: #2e4460 !important;
   transition: background 0.25s ease, border-color 0.25s ease, color 0.45s ease;
 }
 .nav-link-cta::after {
   display: none;
 }
 .nav-link-cta:hover {
-  background: rgba(255,255,255,0.12);
-  border-color: rgba(255,255,255,0.75);
-}
-.nav.scrolled .nav-link-cta {
-  border-color: rgba(77,107,138,0.5);
-  color: #2e4460 !important;
-}
-.nav.scrolled .nav-link-cta:hover {
   background: rgba(77,107,138,0.08);
   border-color: rgba(77,107,138,0.85);
 }
@@ -184,7 +170,7 @@ Nav
 .nav-hamburger-bar {
   display: block;
   height: 1px;
-  background: rgba(255,255,255,0.85);
+  background: #2e4460;
   border-radius: 1px;
   transform-origin: center;
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, background 0.45s ease, width 0.3s ease;
@@ -199,10 +185,6 @@ Nav
   width: 24px;
 }
 
-.nav.scrolled .nav-hamburger-bar {
-  background: #2e4460;
-}
-
 /* Animate to X when open */
 .nav-hamburger[aria-expanded="true"] .nav-hamburger-bar:nth-child(1) {
   width: 24px;
@@ -215,6 +197,14 @@ Nav
 .nav-hamburger[aria-expanded="true"] .nav-hamburger-bar:nth-child(3) {
   width: 24px;
   transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Menu open at the top of the homepage: the nav is see-through over the dark overlay, so switch to light colors */
+.nav:not(.scrolled):not(.nav-scrolled-always):has(.nav-hamburger[aria-expanded="true"]) .nav-brand {
+  color: rgba(255, 255, 255, 0.9);
+}
+.nav:not(.scrolled):not(.nav-scrolled-always):has(.nav-hamburger[aria-expanded="true"]) .nav-hamburger-bar {
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .nav-overlay {
