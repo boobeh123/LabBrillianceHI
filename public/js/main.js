@@ -156,21 +156,23 @@ onScroll();
 const hamburger  = document.querySelector('#nav-hamburger');
 const overlay    = document.querySelector('#nav-overlay');
 const closeLinks = document.querySelectorAll('[data-nav-close]');
+// Everything behind the open menu; inert stops Tab and screen readers from reaching it
+const pageContent = document.querySelectorAll('.skip-link, main, footer');
 
 const openMenu = () => {
   overlay.classList.add('open');
-  overlay.setAttribute('aria-hidden', 'false');
   hamburger.setAttribute('aria-expanded', 'true');
   hamburger.setAttribute('aria-label', 'Close menu');
-  document.body.style.overflow = 'hidden';
+  document.body.classList.add('menu-open');
+  pageContent.forEach((el) => { el.inert = true; });
 };
 
 const closeMenu = () => {
   overlay.classList.remove('open');
-  overlay.setAttribute('aria-hidden', 'true');
   hamburger.setAttribute('aria-expanded', 'false');
   hamburger.setAttribute('aria-label', 'Open menu');
-  document.body.style.overflow = '';
+  document.body.classList.remove('menu-open');
+  pageContent.forEach((el) => { el.inert = false; });
 };
 
 hamburger.addEventListener('click', () => {
@@ -185,9 +187,12 @@ hamburger.addEventListener('click', () => {
 // Close when a nav link is tapped
 closeLinks.forEach((link) => link.addEventListener('click', closeMenu));
 
-// Close on Escape key
+// Close on Escape key and put focus back on the menu button
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && overlay.classList.contains('open')) closeMenu();
+  if (e.key === 'Escape' && overlay.classList.contains('open')) {
+    closeMenu();
+    hamburger.focus();
+  }
 });
 
 // Close if the window widens past the menu-button breakpoint (max-width: 1080px in styles.css),

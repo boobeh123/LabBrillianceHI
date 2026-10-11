@@ -247,6 +247,10 @@ Nav
   opacity: 1;
   visibility: visible;
 }
+/* Stops the page behind the open menu from scrolling */
+.menu-open {
+  overflow: hidden;
+}
 
 /* Auto margins centre the menu, and let it scroll instead of cutting links off on short screens */
 .nav-overlay-links {
