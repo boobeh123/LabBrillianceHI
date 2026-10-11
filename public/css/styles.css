@@ -2330,7 +2330,6 @@ Available Diamonds Redirect
   position: relative;
   overflow: hidden;
   border-radius: 3px;
-  cursor: pointer;
   background: #e8eef4;
 }
 .diamond-card img {
@@ -2350,12 +2349,6 @@ Available Diamonds Redirect
   right: 0;
   padding: 2rem 1.4rem 1.4rem;
   background: linear-gradient(to top, rgba(17, 29, 43, 0.88) 0%, transparent 100%);
-  transform: translateY(100%);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.diamond-card:hover .diamond-card-caption {
-  transform: translateY(0);
 }
 .diamond-card-cut {
   font-family: var(--font-caps);
@@ -3567,10 +3560,6 @@ Media queries
 
   .diamonds-gallery {
     columns: 2;
-  }
-
-  .diamond-card-caption {
-    transform: translateY(0);
   }
 }
 
