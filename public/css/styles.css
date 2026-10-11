@@ -562,6 +562,7 @@ Experience section
 /* ── Timeline container ── */
 .experience-timeline {
   position: relative;
+  list-style: none;
   max-width: 900px;
   margin: 0 auto 6rem;
   display: flex;
@@ -2867,11 +2868,13 @@ Custom Design redirect
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 0;
+  gap: 0 60px;
+  list-style: none;
   max-width: 900px;
   margin: 0 auto;
 }
 .cd-process-step {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2880,13 +2883,15 @@ Custom Design redirect
   flex: 1;
   max-width: 180px;
 }
-.cd-process-connector {
-  flex: 0 0 auto;
+/* Line joining each step to the next, drawn across the 60px gap */
+.cd-process-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 22px; /* align with marker center */
+  left: 100%;
   width: 60px;
   height: 1px;
-  background: linear-gradient(to right, rgba(77,107,138,0.2), rgba(77,107,138,0.2));
-  margin-top: 22px; /* align with marker center */
-  align-self: flex-start;
+  background: rgba(77,107,138,0.2);
 }
 .cd-process-marker {
   width: 44px;
@@ -3663,7 +3668,7 @@ Media queries
     flex-direction: column;
     align-items: center;
   }
-  .cd-process-connector { display: none; }
+  .cd-process-step::after { display: none; }
   .cd-process-step { max-width: 140px; }
   .cd-includes-inner {
     grid-template-columns: 1fr;
