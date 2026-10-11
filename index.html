@@ -721,18 +721,21 @@
               <span class="contact-field-line" aria-hidden="true"></span>
             </div>
           </div>
-          <button class="contact-submit" type="submit">
-            <span class="contact-submit-text">Start Your Design ✨</span>
-            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
+          <div class="contact-form-actions">
+            <button class="contact-submit" type="submit">
+              <span class="contact-submit-text">Start Your Design ✨</span>
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <p class="contact-form-error" role="alert"></p>
+          </div>
           <p class="contact-form-ig-note">
             Prefer to connect directly?
             <a href="https://www.instagram.com/labbrilliancehi/" target="_blank" rel="noopener noreferrer">Message me on Instagram → @labbrilliancehi</a>
           </p>
         </form>
-        <div class="contact-thankyou" id="contact-thankyou" aria-live="polite" hidden>
+        <div class="contact-thankyou" id="contact-thankyou" hidden>
           <svg class="contact-thankyou-diamond" viewBox="0 0 80 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <polygon points="40,0 80,28 62,72 18,72 0,28" fill="none" stroke="#4d6b8a" stroke-width="1.5"/>
             <polygon points="40,0 80,28 40,18" fill="rgba(77,107,138,0.08)" stroke="#4d6b8a" stroke-width="0.8"/>
@@ -741,7 +744,7 @@
             <line x1="40" y1="18" x2="18" y2="72" stroke="#4d6b8a" stroke-width="0.6"/>
             <line x1="40" y1="18" x2="62" y2="72" stroke="#4d6b8a" stroke-width="0.6"/>
           </svg>
-          <h3 class="contact-thankyou-heading">Thank you for your inquiry ✨</h3>
+          <h3 class="contact-thankyou-heading" tabindex="-1">Thank you for your inquiry ✨</h3>
           <p class="contact-thankyou-sub">I'll be in touch soon with curated options for you.</p>
           <p class="contact-thankyou-sign">— LabBrillianceHi 🤍</p>
         </div>

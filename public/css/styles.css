@@ -8,7 +8,8 @@ Custom CSS
     --color-text-muted: rgba(255, 255, 255, 0.65);
     --color-btn-fill:   rgba(77, 107, 138, 0.82);
     --color-btn-hover:  rgba(58,  84, 112, 0.92);
-  
+    --color-error:      #9b2c2c;
+
     --font-serif:  'Cormorant Garamond', Georgia, serif;
     --font-script: 'Great Vibes', cursive;
     --font-caps:   'Raleway', sans-serif;
@@ -1707,6 +1708,13 @@ Contact
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
+  transition: opacity 0.4s ease;
+}
+.contact-form.fade-out {
+  opacity: 0;
+}
+.contact-form[hidden] {
+  display: none;
 }
 
 .contact-form-honeypot {
@@ -1906,6 +1914,19 @@ Contact
 }
 .contact-submit:hover svg {
   transform: translateX(4px);
+}
+
+/* Error message under the submit button, filled in by main.js when sending fails */
+.contact-form-error {
+  font-family: var(--font-caps);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  color: var(--color-error);
+}
+.contact-form-error:not(:empty) {
+  margin-top: 1rem;
 }
 .contact-thankyou {
   display: flex;

@@ -76,45 +76,53 @@ const contactForm = document.querySelector('#contact-form');
 const thankYou = document.querySelector('#contact-thankyou');
 
 if (contactForm && thankYou) {
+  const submitBtn = contactForm.querySelector('.contact-submit');
+  const submitText = submitBtn.querySelector('.contact-submit-text');
+  const submitLabel = submitText.textContent;
+  const formError = contactForm.querySelector('.contact-form-error');
+  const thankYouHeading = thankYou.querySelector('.contact-thankyou-heading');
+
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     // Validate before proceeding — re-enables native required checking
     if (!contactForm.checkValidity()) {
       contactForm.reportValidity(); // shows the browser's native error messages
-    return;
-  }
-
-    const submitBtn = contactForm.querySelector('.contact-submit');
-    const submitText = submitBtn.querySelector('.contact-submit-text');
+      return;
+    }
 
     // Disable button while submitting
     submitBtn.disabled = true;
     submitText.textContent = 'Sending…';
+    formError.textContent = '';
 
     try {
       const formData = new FormData(contactForm);
-      await fetch('/', {
+      const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString(),
       });
 
-      // Swap to thank-you state
-      contactForm.style.transition = 'opacity 0.4s ease';
-      contactForm.style.opacity = '0';
-      
+      // fetch() only rejects on network errors, so a 404 or 500 response has to be caught here
+      if (!response.ok) {
+        throw new Error(`Form submission failed with status ${response.status}`);
+      }
+
+      // Swap to thank-you state, then move focus to it so screen readers announce it
+      contactForm.classList.add('fade-out');
+
       setTimeout(() => {
-        contactForm.style.display = 'none';
         contactForm.hidden = true;
         thankYou.hidden = false;
+        thankYouHeading.focus();
       }, 400);
     } catch (err) {
-      // On error, re-enable the button with a fallback message
+      // On error, re-enable the button and show a message under it
       submitBtn.disabled = false;
-      submitText.textContent = 'Submit Inquiry';
+      submitText.textContent = submitLabel;
+      formError.textContent = 'Something went wrong and your inquiry wasn’t sent. Please try again or message me on Instagram.';
       console.error('Form submission error:', err);
-      alert('Something went wrong. Please try again or reach out directly.');
     }
   });
 }
