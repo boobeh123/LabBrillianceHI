@@ -1024,7 +1024,7 @@ Gallery panel collection
   transition: max-height 0.4s ease, opacity 0.35s ease 0.05s;
 }
 .collection-card:hover .collection-card-desc {
-  max-height: 80px;
+  max-height: 8rem;
   opacity: 1;
 }
 
@@ -3560,7 +3560,7 @@ Media queries
 
   .collection-card-desc {
     opacity: 1;
-    max-height: 80px;
+    max-height: 8rem;
   }
 
   .collection-card-btn {
