@@ -89,6 +89,7 @@
     </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="nav" id="nav" aria-label="Site header">
     <div class="nav-inner">
       <a href="#" class="nav-brand" aria-label="LabBrillianceHI — back to top">
@@ -111,7 +112,7 @@
       </button>
     </div>
   </header>
-  <div class="nav-overlay" id="nav-overlay" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+  <div class="nav-overlay" id="nav-overlay">
     <nav class="nav-overlay-links" aria-label="Mobile primary navigation">
       <a href="#" class="nav-overlay-link" data-nav-close>Home</a>
       <a href="#diamonds" class="nav-overlay-link" data-nav-close>Collection</a>
@@ -125,11 +126,12 @@
     </nav>
     <p class="nav-overlay-tagline">Luxury, simplified.</p>
   </div>
-    <section class="hero" aria-label="Hero">
+  <main id="main">
+    <section class="hero">
         <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-logo">
-        <img src="/public/images/diamond.webp" class="hero-diamond-icon" alt="Diamond logo">
+        <img src="/public/images/diamond.webp" class="hero-diamond-icon" alt="">
         <h1 class="hero-brand">LabBrillianceHI</h1>
         <p class="hero-tagline">
           <span class="hero-rule"></span>
@@ -156,7 +158,7 @@
       <p class="collection-header-sub">Handpicked diamonds and jewelry crafted for every moment.</p>
     </div>
     <div class="collection-grid">
-      <article class="collection-card collection-card-featured" aria-label="Made to order Designs">
+      <article class="collection-card collection-card-featured">
         <div class="collection-card-bg"></div>
         <div class="collection-card-shimmer"></div>
         <div class="collection-card-body">
@@ -172,7 +174,7 @@
         <div class="collection-card-corner collection-card-corner-tl"></div>
         <div class="collection-card-corner collection-card-corner-br"></div>
       </article>
-      <article class="collection-card collection-card-predesigned" aria-label="Custom Jewelry">
+      <article class="collection-card collection-card-predesigned">
         <div class="collection-card-bg"></div>
         <div class="collection-card-shimmer"></div>
         <div class="collection-card-body">
@@ -188,7 +190,7 @@
         <div class="collection-card-corner collection-card-corner-tl"></div>
         <div class="collection-card-corner collection-card-corner-br"></div>
       </article>
-      <article class="collection-card collection-card-gems" aria-label="Diamonds">
+      <article class="collection-card collection-card-gems">
         <div class="collection-card-bg"></div>
         <div class="collection-card-shimmer"></div>
         <div class="collection-card-body">
@@ -208,11 +210,11 @@
   </section>
   <section class="about" id="about" aria-label="About LabBrillianceHI">
     <div class="about-pull">
-      <span class="about-pull-mark">&ldquo;</span>
+      <span class="about-pull-mark" aria-hidden="true">&ldquo;</span>
       <blockquote class="about-pull-quote">
         Beautiful diamonds should be accessible<br>without unnecessary markups.
       </blockquote>
-      <span class="about-pull-mark">&rdquo;</span>
+      <span class="about-pull-mark" aria-hidden="true">&rdquo;</span>
     </div>
     <div class="about-divider" aria-hidden="true">
       <span class="about-divider-rule"></span>
@@ -400,8 +402,8 @@
       <h2 class="experience-header-title">A Simple, Intentional Process</h2>
       <p class="experience-header-sub">From sourcing to creation — every step designed around you.</p>
     </div>
-    <div class="experience-timeline" aria-label="Process steps">
-      <div class="experience-step experience-step-left">
+    <ol class="experience-timeline" role="list" aria-label="Process steps">
+      <li class="experience-step experience-step-left">
         <div class="experience-step-content">
           <span class="experience-step-label">01</span>
           <h3 class="experience-step-title">Consultation</h3>
@@ -418,8 +420,8 @@
           </svg>
         </div>
         <div class="experience-step-empty" aria-hidden="true"></div>
-      </div>
-      <div class="experience-step experience-step-right">
+      </li>
+      <li class="experience-step experience-step-right">
         <div class="experience-step-empty" aria-hidden="true"></div>
         <div class="experience-step-marker" aria-hidden="true">
           <svg viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -436,8 +438,8 @@
           <p class="experience-step-text">A curated selection of diamonds is sourced based on your preferences — so you can compare and choose what feels right.</p>
           <p class="experience-step-note">Every stone is IGI certified and hand-selected for exceptional cut, color, and clarity.</p>
         </div>
-      </div>
-      <div class="experience-step experience-step-left">
+      </li>
+      <li class="experience-step experience-step-left">
         <div class="experience-step-content">
           <span class="experience-step-label">03</span>
           <h3 class="experience-step-title">Design</h3>
@@ -454,8 +456,8 @@
           </svg>
         </div>
         <div class="experience-step-empty" aria-hidden="true"></div>
-      </div>
-      <div class="experience-step experience-step-right">
+      </li>
+      <li class="experience-step experience-step-right">
         <div class="experience-step-empty" aria-hidden="true"></div>
         <div class="experience-step-marker" aria-hidden="true">
           <svg viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -472,8 +474,8 @@
           <p class="experience-step-text">Once approved, your piece is crafted with care. Estimated completion time is 5–6 weeks from approval.</p>
           <p class="experience-step-note">All shipments are fully insured with tracking provided once your piece is on its way.</p>
         </div>
-      </div>
-    </div>
+      </li>
+    </ol>
   </section>
   <section class="founder" id="founder" aria-label="Meet the Founder">
     <div class="founder-inner">
@@ -517,7 +519,7 @@
             P.S. Every piece starts with a conversation, so unfortunately you'll have to talk to me. But that's kind of the whole point. 🤍
           </p>
         </div>
-        <div class="founder-cluster" aria-hidden="true">
+        <div class="founder-cluster">
           <div class="founder-cluster-img founder-cluster-img-back">
             <img
               src="public/images/IMG_6812.webp"
@@ -751,6 +753,7 @@
       </div>
     </div>
   </section>
+  </main>
   <footer class="footer" aria-label="Site footer">
     <svg class="footer-watermark" viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <polygon points="200,0 400,140 310,360 90,360 0,140" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1.5"/>

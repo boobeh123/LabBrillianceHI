@@ -41,6 +41,27 @@ Base styles
 Nav
 ***************************************************************/
 
+/* Hidden above the page until a keyboard user tabs to it */
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 200;
+  padding: 0.6rem 1.1rem;
+  background: #2e4460;
+  color: #fff;
+  font-family: var(--font-caps);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border-radius: 2px;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -225,6 +246,10 @@ Nav
 .nav-overlay.open {
   opacity: 1;
   visibility: visible;
+}
+/* Stops the page behind the open menu from scrolling */
+.menu-open {
+  overflow: hidden;
 }
 
 /* Auto margins centre the menu, and let it scroll instead of cutting links off on short screens */
@@ -537,6 +562,7 @@ Experience section
 /* ── Timeline container ── */
 .experience-timeline {
   position: relative;
+  list-style: none;
   max-width: 900px;
   margin: 0 auto 6rem;
   display: flex;
@@ -962,7 +988,8 @@ Gallery panel collection
   opacity: 0;
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
-.collection-card:hover .collection-card-corner {
+.collection-card:hover .collection-card-corner,
+.collection-card:focus-within .collection-card-corner {
   opacity: 1;
 }
 
@@ -972,7 +999,8 @@ Gallery panel collection
   border-left: 1px solid rgba(255,255,255,0.6);
   transform: translate(4px, 4px);
 }
-.collection-card:hover .collection-card-corner-tl {
+.collection-card:hover .collection-card-corner-tl,
+.collection-card:focus-within .collection-card-corner-tl {
   transform: translate(0, 0);
 }
 
@@ -982,7 +1010,8 @@ Gallery panel collection
   border-right: 1px solid rgba(255,255,255,0.6);
   transform: translate(-4px, -4px);
 }
-.collection-card:hover .collection-card-corner-br {
+.collection-card:hover .collection-card-corner-br,
+.collection-card:focus-within .collection-card-corner-br {
   transform: translate(0, 0);
 }
 
@@ -1023,7 +1052,8 @@ Gallery panel collection
   opacity: 0;
   transition: max-height 0.4s ease, opacity 0.35s ease 0.05s;
 }
-.collection-card:hover .collection-card-desc {
+.collection-card:hover .collection-card-desc,
+.collection-card:focus-within .collection-card-desc {
   max-height: 8rem;
   opacity: 1;
 }
@@ -1048,7 +1078,8 @@ Gallery panel collection
   transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s,
               border-color 0.25s ease;
 }
-.collection-card:hover .collection-card-btn {
+.collection-card:hover .collection-card-btn,
+.collection-card:focus-within .collection-card-btn {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1852,6 +1883,7 @@ Contact
   flex-wrap: wrap;
 }
 .contact-chip {
+  position: relative;
   cursor: pointer;
 }
 .contact-chip input {
@@ -1881,6 +1913,11 @@ Contact
 .contact-chip:hover span {
   border-color: var(--color-brand);
   color: var(--color-brand);
+}
+/* The radio itself is invisible, so its chip shows the keyboard focus */
+.contact-chip input:focus-visible + span {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
 }
 
 .contact-submit {
@@ -2319,7 +2356,6 @@ Available Diamonds Redirect
   position: relative;
   overflow: hidden;
   border-radius: 3px;
-  cursor: pointer;
   background: #e8eef4;
 }
 .diamond-card img {
@@ -2339,12 +2375,6 @@ Available Diamonds Redirect
   right: 0;
   padding: 2rem 1.4rem 1.4rem;
   background: linear-gradient(to top, rgba(17, 29, 43, 0.88) 0%, transparent 100%);
-  transform: translateY(100%);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.diamond-card:hover .diamond-card-caption {
-  transform: translateY(0);
 }
 .diamond-card-cut {
   font-family: var(--font-caps);
@@ -2838,11 +2868,13 @@ Custom Design redirect
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 0;
+  gap: 0 60px;
+  list-style: none;
   max-width: 900px;
   margin: 0 auto;
 }
 .cd-process-step {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2851,13 +2883,15 @@ Custom Design redirect
   flex: 1;
   max-width: 180px;
 }
-.cd-process-connector {
-  flex: 0 0 auto;
+/* Line joining each step to the next, drawn across the 60px gap */
+.cd-process-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 22px; /* align with marker center */
+  left: 100%;
   width: 60px;
   height: 1px;
-  background: linear-gradient(to right, rgba(77,107,138,0.2), rgba(77,107,138,0.2));
-  margin-top: 22px; /* align with marker center */
-  align-self: flex-start;
+  background: rgba(77,107,138,0.2);
 }
 .cd-process-marker {
   width: 44px;
@@ -3554,6 +3588,13 @@ Media queries
     transition-delay: 0s;
   }
 
+  .diamonds-gallery {
+    columns: 2;
+  }
+}
+
+/* Small screens and touch screens can't hover, so the card details always show */
+@media (max-width: 900px), (hover: none) {
   .collection-card-corner {
     opacity: 1;
   }
@@ -3565,14 +3606,6 @@ Media queries
 
   .collection-card-btn {
     opacity: 1;
-  }
-
-  .diamonds-gallery {
-    columns: 2;
-  }
-
-  .diamond-card-caption {
-    transform: translateY(0);
   }
 }
 
@@ -3635,7 +3668,7 @@ Media queries
     flex-direction: column;
     align-items: center;
   }
-  .cd-process-connector { display: none; }
+  .cd-process-step::after { display: none; }
   .cd-process-step { max-width: 140px; }
   .cd-includes-inner {
     grid-template-columns: 1fr;
