@@ -1331,19 +1331,25 @@ Policies section
   color: #8baac8;
 }
 
+/* Grows from 0fr to 1fr so any answer length fits; visibility keeps closed answers away from screen readers */
 .policies-item-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-              padding 0.35s ease;
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              padding 0.35s ease,
+              visibility 0.4s;
   padding: 0 0 0 3.2rem;
 }
 .policies-item-body.open {
-  max-height: 200px;
+  grid-template-rows: 1fr;
+  visibility: visible;
   padding: 0 0 1.4rem 3.2rem;
 }
 
 .policies-item-body p {
+  min-height: 0;
+  overflow: hidden;
   font-family: var(--font-caps);
   font-size: 0.85rem;
   font-weight: 300;
