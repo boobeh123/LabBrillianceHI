@@ -962,7 +962,8 @@ Gallery panel collection
   opacity: 0;
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
-.collection-card:hover .collection-card-corner {
+.collection-card:hover .collection-card-corner,
+.collection-card:focus-within .collection-card-corner {
   opacity: 1;
 }
 
@@ -972,7 +973,8 @@ Gallery panel collection
   border-left: 1px solid rgba(255,255,255,0.6);
   transform: translate(4px, 4px);
 }
-.collection-card:hover .collection-card-corner-tl {
+.collection-card:hover .collection-card-corner-tl,
+.collection-card:focus-within .collection-card-corner-tl {
   transform: translate(0, 0);
 }
 
@@ -982,7 +984,8 @@ Gallery panel collection
   border-right: 1px solid rgba(255,255,255,0.6);
   transform: translate(-4px, -4px);
 }
-.collection-card:hover .collection-card-corner-br {
+.collection-card:hover .collection-card-corner-br,
+.collection-card:focus-within .collection-card-corner-br {
   transform: translate(0, 0);
 }
 
@@ -1023,7 +1026,8 @@ Gallery panel collection
   opacity: 0;
   transition: max-height 0.4s ease, opacity 0.35s ease 0.05s;
 }
-.collection-card:hover .collection-card-desc {
+.collection-card:hover .collection-card-desc,
+.collection-card:focus-within .collection-card-desc {
   max-height: 8rem;
   opacity: 1;
 }
@@ -1048,7 +1052,8 @@ Gallery panel collection
   transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s,
               border-color 0.25s ease;
 }
-.collection-card:hover .collection-card-btn {
+.collection-card:hover .collection-card-btn,
+.collection-card:focus-within .collection-card-btn {
   opacity: 1;
   transform: translateY(0);
 }
@@ -3560,6 +3565,17 @@ Media queries
     transition-delay: 0s;
   }
 
+  .diamonds-gallery {
+    columns: 2;
+  }
+
+  .diamond-card-caption {
+    transform: translateY(0);
+  }
+}
+
+/* Small screens and touch screens can't hover, so the card details always show */
+@media (max-width: 900px), (hover: none) {
   .collection-card-corner {
     opacity: 1;
   }
@@ -3571,14 +3587,6 @@ Media queries
 
   .collection-card-btn {
     opacity: 1;
-  }
-
-  .diamonds-gallery {
-    columns: 2;
-  }
-
-  .diamond-card-caption {
-    transform: translateY(0);
   }
 }
 
