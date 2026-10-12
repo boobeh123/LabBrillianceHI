@@ -23,7 +23,7 @@ Pseudocode:
 * Begin watching elements by calling observer.observe(elements)
 ******************************************/
 
-const revealTargets = document.querySelectorAll('.collection-header, .collection-card, .about-pull, .about-divider, .about-col, .about-col-rule, .about-signoff, .policies-header, .policies-accordion, .policies-footer, .contact-intro, .contact-form-wrap, .experience-header, .experience-step, .experience-ways, .founder-portrait-col, .founder-copy-col');
+const revealTargets = document.querySelectorAll('.collection-header, .collection-card, .about-pull, .about-divider, .about-col, .about-col-rule, .about-signoff, .policies-header, .policies-accordion, .policies-footer, .contact-intro, .contact-form-wrap, .experience-header, .experience-step, .founder-portrait-col, .founder-copy-col');
   
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -49,14 +49,14 @@ triggers.forEach((trigger) => {
   trigger.addEventListener('click', () => {
     const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
     const bodyId = trigger.getAttribute('aria-controls');
-    const body = document.getElementById(bodyId);
+    const body = document.querySelector(`#${bodyId}`);
 
     // Close all other open panels first
     triggers.forEach((otherTrigger) => {
       if (otherTrigger !== trigger) {
         otherTrigger.setAttribute('aria-expanded', 'false');
         const otherId = otherTrigger.getAttribute('aria-controls');
-        const otherBody = document.getElementById(otherId);
+        const otherBody = document.querySelector(`#${otherId}`);
         otherBody.classList.remove('open');
       }
     });

@@ -17,6 +17,35 @@ LabBrillianceHI webpage - https://labbrilliancehi.netlify.app/
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" alt="HTML" height="50"/><img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS" height="50"/><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" height="50"/>
 
 ## Version History
+# 🛠️ LabBrillianceHI Patch 1.0.004
+📅 **Release Date:** October 11th, 2026
+
+## 📢 Developer's Notes - Fixes, accessibility & performance
+
+- Contact form (#1)
+    - An inquiry that failed to send used to show "Thank you"; it now shows an error message under the button and restores the button label
+    - The thank-you message is announced to screen readers
+- Bug fixes (#1)
+    - Long FAQ answers are no longer cut off on phones
+    - The homepage menu is readable before scrolling (it was white on the pale hero photo)
+    - Screens narrower than 1080px (tablets) get the menu button, since the full menu didn't fit there
+    - The Made-to-Order card description shows its last line
+- Keyboard & screen readers (#2)
+    - Visible keyboard focus on the form's option buttons and the collection cards
+    - A main content landmark and a "Skip to content" link on every page
+    - The phone menu keeps keyboard focus inside while open, and Escape closes it
+    - Diamond specs are always visible on the diamonds page
+- Readability & motion (#3)
+    - All text meets WCAG AA contrast (4.5:1)
+    - The site respects the "reduce motion" setting
+    - The founder photo and contact intro stay pinned while scrolling on tall screens
+- Performance (#4)
+    - Photos resized to match their on-screen size: the homepage went from 1.2 MB to 0.7 MB
+    - Removed the unused Font Awesome stylesheet, fixed the hero preload, switched to PNG favicons
+- Consistency & cleanup (#5)
+    - The same menu, phone menu, and footer links on all five pages
+    - Removed the leftover "Two Ways" styles, and the site script now loads from the page head
+---------------------------------------------------------------------------------------------------------------------------
 # 🛠️ LabBrillianceHI Patch 1.0.003
 📅 **Release Date:** June 22nd, 2026
 
