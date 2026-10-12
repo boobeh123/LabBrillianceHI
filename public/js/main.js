@@ -49,14 +49,14 @@ triggers.forEach((trigger) => {
   trigger.addEventListener('click', () => {
     const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
     const bodyId = trigger.getAttribute('aria-controls');
-    const body = document.getElementById(bodyId);
+    const body = document.querySelector(`#${bodyId}`);
 
     // Close all other open panels first
     triggers.forEach((otherTrigger) => {
       if (otherTrigger !== trigger) {
         otherTrigger.setAttribute('aria-expanded', 'false');
         const otherId = otherTrigger.getAttribute('aria-controls');
-        const otherBody = document.getElementById(otherId);
+        const otherBody = document.querySelector(`#${otherId}`);
         otherBody.classList.remove('open');
       }
     });
